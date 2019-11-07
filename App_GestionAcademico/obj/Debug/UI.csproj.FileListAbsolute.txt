@@ -1,0 +1,64 @@
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\bin\Debug\App_GestionAcademico.exe.config
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\bin\Debug\App_GestionAcademico.exe
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\bin\Debug\App_GestionAcademico.pdb
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\bin\Debug\MetroFramework.Design.dll
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\bin\Debug\MetroFramework.dll
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\obj\Debug\UI.csprojResolveAssemblyReference.cache
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\obj\Debug\App_GestionAcademico.Properties.Resources.resources
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\obj\Debug\UI.csproj.GenerateResource.Cache
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\obj\Debug\App_GestionAcademico.exe
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\obj\Debug\App_GestionAcademico.pdb
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\obj\Debug\App_AcademicManagement.frmCargaInicial.resources
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\obj\Debug\App_AcademicManagement.frmLogin.resources
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\obj\Debug\App_AcademicManagement.frmManagePermissions.resources
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\bin\Debug\AE.dll
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\bin\Debug\AE.pdb
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\bin\Debug\App_AcademicManagement.exe.config
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\bin\Debug\App_AcademicManagement.exe
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\bin\Debug\App_AcademicManagement.pdb
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\bin\Debug\AE.dll
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\bin\Debug\MetroFramework.Design.dll
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\bin\Debug\MetroFramework.dll
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\bin\Debug\AE.pdb
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\obj\Debug\UI.csprojResolveAssemblyReference.cache
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.frmCargaInicial.resources
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.frmLogin.resources
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.frmManagePermissions.resources
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.Properties.Resources.resources
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\obj\Debug\UI.csproj.GenerateResource.Cache
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.exe
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.pdb
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\bin\Debug\BL.dll
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\bin\Debug\DA.dll
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\bin\Debug\BL.pdb
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\bin\Debug\DA.pdb
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.frmSplash.resources
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.userCMenu.resources
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.UserCInicio.resources
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\bin\Debug\UI2.dll
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\App_GestionAcademico\bin\Debug\UI2.pdb
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\bin\Debug\App_AcademicManagement.exe.config
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.exe
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.pdb
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\bin\Debug\App_AcademicManagement.exe
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\bin\Debug\App_AcademicManagement.pdb
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\bin\Debug\AE.dll
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\bin\Debug\BL.dll
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\bin\Debug\UI2.dll
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\bin\Debug\DA.dll
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\bin\Debug\AE.pdb
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\bin\Debug\BL.pdb
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\bin\Debug\UI2.pdb
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\bin\Debug\DA.pdb
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.frmCargaInicial.resources
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.frmLogin.resources
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.frmManagePermissions.resources
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.frmSplash.resources
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.Properties.Resources.resources
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.userCMenu.resources
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.UserCInicio.resources
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\obj\Debug\UI.csproj.GenerateResource.Cache
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\Richard\Desktop\App_AcademicManagement\App_GestionAcademico\obj\Debug\UI.csproj.CopyComplete

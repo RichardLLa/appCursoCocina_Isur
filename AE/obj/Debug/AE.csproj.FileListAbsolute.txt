@@ -1,0 +1,14 @@
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\AE\bin\Debug\AE.dll
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\AE\bin\Debug\AE.pdb
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\AE\obj\Debug\AE.csprojResolveAssemblyReference.cache
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\AE\obj\Debug\AE.dll
+C:\Users\Ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\AE\obj\Debug\AE.pdb
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\AE\bin\Debug\AE.dll
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\AE\bin\Debug\AE.pdb
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\AE\obj\Debug\AE.dll
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\AE\obj\Debug\AE.pdb
+C:\Users\Richard\Desktop\App_AcademicManagement\AE\bin\Debug\AE.dll
+C:\Users\Richard\Desktop\App_AcademicManagement\AE\bin\Debug\AE.pdb
+C:\Users\Richard\Desktop\App_AcademicManagement\AE\obj\Debug\AE.csprojResolveAssemblyReference.cache
+C:\Users\Richard\Desktop\App_AcademicManagement\AE\obj\Debug\AE.dll
+C:\Users\Richard\Desktop\App_AcademicManagement\AE\obj\Debug\AE.pdb

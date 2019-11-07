@@ -1,0 +1,17 @@
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\UI2\bin\Debug\UI2.dll
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\UI2\bin\Debug\UI2.pdb
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\UI2\obj\Debug\UI2.frmManagePermissions.resources
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\UI2\obj\Debug\UI2.csproj.GenerateResource.Cache
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\UI2\obj\Debug\UI2.dll
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\UI2\obj\Debug\UI2.pdb
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\UI2\bin\Debug\MetroFramework.Design.dll
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\UI2\bin\Debug\MetroFramework.dll
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\UI2\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\UI2\obj\Debug\UI2.csprojResolveAssemblyReference.cache
+C:\Users\Richard\Desktop\App_AcademicManagement\UI2\bin\Debug\UI2.dll
+C:\Users\Richard\Desktop\App_AcademicManagement\UI2\bin\Debug\UI2.pdb
+C:\Users\Richard\Desktop\App_AcademicManagement\UI2\obj\Debug\UI2.csprojResolveAssemblyReference.cache
+C:\Users\Richard\Desktop\App_AcademicManagement\UI2\obj\Debug\UI2.frmManagePermissions.resources
+C:\Users\Richard\Desktop\App_AcademicManagement\UI2\obj\Debug\UI2.csproj.GenerateResource.Cache
+C:\Users\Richard\Desktop\App_AcademicManagement\UI2\obj\Debug\UI2.dll
+C:\Users\Richard\Desktop\App_AcademicManagement\UI2\obj\Debug\UI2.pdb

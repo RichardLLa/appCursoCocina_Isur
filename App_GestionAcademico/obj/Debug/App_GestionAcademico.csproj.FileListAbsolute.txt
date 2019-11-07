@@ -1,0 +1,12 @@
+c:\users\ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\bin\Debug\App_GestionAcademico.exe.config
+c:\users\ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\bin\Debug\App_GestionAcademico.exe
+c:\users\ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\bin\Debug\App_GestionAcademico.pdb
+c:\users\ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\bin\Debug\MetroFramework.Design.dll
+c:\users\ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\bin\Debug\MetroFramework.dll
+c:\users\ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\bin\Debug\MetroFramework.Fonts.dll
+c:\users\ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\obj\Debug\App_GestionAcademico.csprojResolveAssemblyReference.cache
+c:\users\ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\obj\Debug\App_GestionAcademico.Properties.Resources.resources
+c:\users\ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\obj\Debug\App_GestionAcademico.csproj.GenerateResource.Cache
+c:\users\ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\obj\Debug\App_GestionAcademico.exe
+c:\users\ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\obj\Debug\App_GestionAcademico.pdb
+c:\users\ritchard\documents\visual studio 2015\Projects\App_GestionAcademico\App_GestionAcademico\obj\Debug\App_GestionAcademico.frmLogin.resources

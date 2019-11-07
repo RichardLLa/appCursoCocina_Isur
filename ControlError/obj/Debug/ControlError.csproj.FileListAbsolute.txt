@@ -1,0 +1,4 @@
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\ControlError\bin\Debug\ControlError.dll
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\ControlError\bin\Debug\ControlError.pdb
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\ControlError\obj\Debug\ControlError.dll
+C:\Users\Ritchard\Documents\Visual Studio 2015\Projects\App_AcademicManagement\ControlError\obj\Debug\ControlError.pdb
