@@ -12,3 +12,8 @@ C:\Users\Richard\Desktop\App_AcademicManagement\AE\bin\Debug\AE.pdb
 C:\Users\Richard\Desktop\App_AcademicManagement\AE\obj\Debug\AE.csprojResolveAssemblyReference.cache
 C:\Users\Richard\Desktop\App_AcademicManagement\AE\obj\Debug\AE.dll
 C:\Users\Richard\Desktop\App_AcademicManagement\AE\obj\Debug\AE.pdb
+E:\Cursos\Escritorio\App_AcademicManagement\AE\bin\Debug\AE.dll
+E:\Cursos\Escritorio\App_AcademicManagement\AE\bin\Debug\AE.pdb
+E:\Cursos\Escritorio\App_AcademicManagement\AE\obj\Debug\AE.csprojAssemblyReference.cache
+E:\Cursos\Escritorio\App_AcademicManagement\AE\obj\Debug\AE.dll
+E:\Cursos\Escritorio\App_AcademicManagement\AE\obj\Debug\AE.pdb

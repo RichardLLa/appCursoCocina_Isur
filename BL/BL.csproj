@@ -40,12 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Seguridad\blPersona.cs" />
+    <Compile Include="Seguridad\aeRole.cs" />
+    <Compile Include="Seguridad\blRole.cs" />
+    <Compile Include="Seguridad\blPerson.cs" />
     <Compile Include="Seguridad\blMenu.cs" />
-    <Compile Include="Seguridad\blModulo.cs" />
     <Compile Include="Seguridad\blSesion.cs" />
     <Compile Include="control de errores\blControlError.cs" />
-    <Compile Include="Seguridad\daUser.cs" />
+    <Compile Include="Seguridad\blUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

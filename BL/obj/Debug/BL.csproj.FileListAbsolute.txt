@@ -16,3 +16,13 @@ C:\Users\Richard\Desktop\App_AcademicManagement\BL\bin\Debug\DA.pdb
 C:\Users\Richard\Desktop\App_AcademicManagement\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
 C:\Users\Richard\Desktop\App_AcademicManagement\BL\obj\Debug\BL.dll
 C:\Users\Richard\Desktop\App_AcademicManagement\BL\obj\Debug\BL.pdb
+E:\Cursos\Escritorio\App_AcademicManagement\BL\bin\Debug\BL.dll
+E:\Cursos\Escritorio\App_AcademicManagement\BL\bin\Debug\BL.pdb
+E:\Cursos\Escritorio\App_AcademicManagement\BL\bin\Debug\AE.dll
+E:\Cursos\Escritorio\App_AcademicManagement\BL\bin\Debug\DA.dll
+E:\Cursos\Escritorio\App_AcademicManagement\BL\bin\Debug\AE.pdb
+E:\Cursos\Escritorio\App_AcademicManagement\BL\bin\Debug\DA.pdb
+E:\Cursos\Escritorio\App_AcademicManagement\BL\obj\Debug\BL.csprojAssemblyReference.cache
+E:\Cursos\Escritorio\App_AcademicManagement\BL\obj\Debug\BL.csproj.CopyComplete
+E:\Cursos\Escritorio\App_AcademicManagement\BL\obj\Debug\BL.dll
+E:\Cursos\Escritorio\App_AcademicManagement\BL\obj\Debug\BL.pdb

@@ -6,12 +6,25 @@ using System.Threading.Tasks;
 
 namespace AE
 {
-    public class aeUser
+    public class aeUser :  aePerson
     {
-        public int IdUsuario { get; set; }
-        public string Usuario { get; set; }
-        public string Contraseña { get; set; }
-        public bool Estado { get; set; }
-        public int IdPersona{ get; set; }
+        public aeUser()
+        {
+
+        }
+        public aeUser(string pUser, string pPassword)
+        {
+            Alias = pUser;
+            Password = pPassword;
+        }
+        public int IdUser { get; set; }
+        public string Alias { get; set; }
+        public string Password { get; set; }
+        public bool Estate { get; set; }
+        public string RowVersion { get; set; }
+        public List<aeRole> ListRoles { get; set; }
+        public List<aeMenu> MenusGranted { get; set; }
+        public List<aeMenu> MenusDenegated { get; set; }
+
     }
 }

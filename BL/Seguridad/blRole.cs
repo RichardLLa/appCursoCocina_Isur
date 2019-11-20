@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DA;
 using AE;
+using DA;
 
 namespace BL
 {
-    public class blMenu
+    public class blRole
     {
-        daMenu oDA = new daMenu();
-        public List<aeMenu> GetRows(int pIdRole, ref string pResult)
+        public static List<aeRole> GetRow(int pIdUser, ref string pResult)
         {
-            List<aeMenu> oList = daMenu.GetData(pIdRole, ref pResult);
+            List<aeRole> oList = daRole.GetData(pIdUser,ref pResult);
             foreach (var item in oList)
             {
-                blMenu blMenu
+                blMenu blMenu = new blMenu();
             }
             return oList;
         }

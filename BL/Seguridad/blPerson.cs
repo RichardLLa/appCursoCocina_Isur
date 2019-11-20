@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace BL
 {
-    public class blPersona
+    public class blPerson
     {
-        daPersona oDA = new daPersona();
-        public aePersona GetRow(int pIdPersona)
+        daPerson oDA = new daPerson();
+        public aePerson GetRow(int pIdPersona)
         {
             return oDA.GetData(pIdPersona);
         }

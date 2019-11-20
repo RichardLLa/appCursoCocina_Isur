@@ -18,7 +18,7 @@ namespace App_AcademicManagement
     {
         #region atributos
         private Dictionary<MetroTile, aeModulo> DicModulos = new Dictionary<MetroTile, aeModulo>();
-        private aeSesion sesionActivo = new    aeSesion();
+        private aeSession SessionActivated = new    aeSession();
         List<userCMenu> cmenuList = new List<userCMenu>();
         #endregion
         public frmCargaInicial()
@@ -28,30 +28,46 @@ namespace App_AcademicManagement
         }
         public frmCargaInicial(aeUser user)
         {
-            blSesion oAe = new blSesion();
-            sesionActivo = oAe.IniciarSesion(user);
+            blSession oAe = new blSession();
+            SessionActivated = oAe.Login(user);
             InitializeComponent();
             CargarInicial();
         }
+        public frmCargaInicial(int idUser)
+        {
+            blSession oAe = new blSession();
+            SessionActivated = oAe.IniciarSesion(user);
+            //InitializeComponent();
+            //CargarInicial();
+        }
         private void CargarInicial()
         {
-            ConstruirModulos();
-            ContruirMenus();
+            ConstruirModulosPadre();
             tsPeriodo.Text = DateTime.Now.Year.ToString();
-            userCInicio1.Nombre = sesionActivo.Persona.Nombre +" "+ sesionActivo.Persona.Apellidos;
+            userCInicio1.Nombre = SessionActivated.Persona.Nombre +" "+ SessionActivated.Persona.Apellidos;
             userCInicio1.Detalle =  "Detalles:";
         }
-
-        private void ContruirMenus()
+        public void ContruirMenus()
         {
-            foreach (var item in sesionActivo.Modulos)
+            ConstruirModulo();
+            ConstruirMenu();
+        }
+
+        private void ConstruirModulosPadre()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void ConstruirMenu()
+        {
+            foreach (var item in SessionActivated.Modulos)
             {
                 List<aeMenu> aeMenu = new List<aeMenu>();
-                for (int i = 0; i < sesionActivo.Menus.Count; i++)
+                for (int i = 0; i < SessionActivated.Menus.Count; i++)
                 {
-                    if (sesionActivo.Menus[i].IdModulo == item.IdModulo)
+                    if (SessionActivated.Menus[i].IdModulo == item.IdModulo)
                     {
-                        aeMenu.Add(sesionActivo.Menus[i]);
+                        aeMenu.Add(SessionActivated.Menus[i]);
                     }
                 }
                 userCMenu cm = new userCMenu(aeMenu,item.IdModulo,this,this.ContenedorPrincipal);
@@ -74,10 +90,10 @@ namespace App_AcademicManagement
             
         }
 
-        void ConstruirModulos()
+        void ConstruirModulo()
         {
             blModulo oBLMod = new blModulo();
-            List<aeModulo> oLMod = oBLMod.GetRow(sesionActivo.Usuario.IdUsuario);
+            List<aeModulo> oLMod = oBLMod.GetRow(SessionActivated.User.IdUser);
 
             ToolTip toolTip = new ToolTip();
             toolTip.AutoPopDelay = 5000;

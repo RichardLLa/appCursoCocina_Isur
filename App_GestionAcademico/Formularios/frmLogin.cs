@@ -16,8 +16,9 @@ namespace App_AcademicManagement
 {
     public partial class frmLogin : MetroFramework.Forms.MetroForm
     {
-        private blSesion oBlsesion = new blSesion();
+        private blSession oBlsession = new blSession();
         private aeUser User = new aeUser();
+        string result = null;
         public frmLogin()
         {
             InitializeComponent();
@@ -42,7 +43,7 @@ namespace App_AcademicManagement
                 this.mLinkRegister.Name = "mLinkRegister";
                 this.mLinkRegister.Size = new System.Drawing.Size(149, 71);
             }
-            
+
             if (this.tabLogin.SelectedIndex == 1)
             {
                 this.PnlLogin.SendToBack();
@@ -61,31 +62,33 @@ namespace App_AcademicManagement
                 aeControlError v = new aeControlError();
                 aeUser oAeUser = new aeUser();
                 blUser oBlUser = new blUser();
-                oAeUser.Usuario = txtUserNew.Text;
-                oAeUser.Contraseña = Encriptar(txtPassNew.Text);
+                oAeUser.Alias = txtUserNew.Text;
+                oAeUser.Password = Encriptar(txtPassNew.Text);
                 if (RegisterPanel)
                 {
-                    try
+                    if (oBlUser.CreateUser(oAeUser, ref result))
                     {
-                        oBlUser.CreateUser(oAeUser);
+                        MetroMessageBox.Show(this, "User created!", "USER!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MetroMessageBox.Show(this, ex.Message, "ATENCION!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        return;
+                        MetroMessageBox.Show(this, result, "ATENCION!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
+                    return;
                 }
                 else
                 {
-                    try
+
+                    if (oBlUser.CambiarContraseña(oAeUser, ref result))
                     {
-                        oBlUser.CambiarContraseña(oAeUser);
+                        MetroMessageBox.Show(this,"Contraseña actualizada", "Correcto!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MetroMessageBox.Show(this, ex.Message, "ATENCION!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MetroMessageBox.Show(this, result, "ATENCION!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         return;
                     }
+
                 }
                 this.tabLogin.SelectedIndex = 0;
                 CleanFields();
@@ -132,7 +135,7 @@ namespace App_AcademicManagement
                 errProvider.Clear();
                 errProvider.SetError(txtUser, "Usuario vacio");
                 txtUser.Focus();
-                return ;
+                return;
             }
             if (txtPasword.Text == string.Empty)
             {
@@ -141,47 +144,50 @@ namespace App_AcademicManagement
                 txtPasword.Focus();
                 return;
             }
-            if (txtUser.Text == string.Empty) return;
-            if (ValidarUsuario())
-            {
-
-               this.DialogResult = DialogResult.OK;
-                this.Visible = false;
-                txtPasword.Text = string.Empty;
-                frmCargaInicial program = new frmCargaInicial(User);
-                program.ShowDialog();
-                this.Visible = true;
-                program.Close();
-                program.Dispose();
-            }
+            ValidarUsuario();
         }
 
-        private bool ValidarUsuario()
+        private void ValidarUsuario()
         {
-            try
+            string _user = txtUser.Text;
+            //Encriptar pass
+            string _pwd = Encriptar(txtPasword.Text);
+            //int? Iduser = oBlsession.ValidateUser(_user, _pwd, ref result);
+            aeSession userSession = oBlsession.Login(_user, _pwd, ref result);
+
+            if (Iduser == null)
             {
-                User.Usuario = txtUser.Text;
-                //Encriptar pass
-                User.Contraseña = Encriptar(txtPasword.Text);
-                User = oBlsesion.ValidateUser(User);
-                return true;
+                MetroMessageBox.Show(this, result, "ATENCION!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-            catch (Exception ex)
-            {
-                MetroMessageBox.Show(this, ex.Message, "ATENCION!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                return false;
+            else{
+                try
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Visible = false;
+                    txtPasword.Text = string.Empty;
+                    frmCargaInicial program = new frmCargaInicial(Convert.ToInt16(Iduser));
+                    program.ShowDialog();
+                    this.Visible = true;
+                    program.Close();
+                    program.Dispose();
+                }
+                catch (Exception)
+                {
+                    MetroMessageBox.Show(this, "Error al cargar la pantalla principal", "ERROR FATAL!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
         }
-        
+
 
         private string Encriptar(string KeyText)
         {
             string key = KeyText.Trim();
             string keyEncriptado = string.Empty;
             int intKey = 100;
-            for (int i = 0; i < key.Length ; i++)
+            for (int i = 0; i < key.Length; i++)
             {
-                intKey = (intKey + Encoding.ASCII.GetBytes(key.Substring(i,1))[0]);
+                intKey = (intKey + Encoding.ASCII.GetBytes(key.Substring(i, 1))[0]);
             }
             intKey = intKey % 31;
             int envertido = 1;
@@ -191,7 +197,7 @@ namespace App_AcademicManagement
             {
                 envertido = envertido * -1;
                 intKey = intKey == 0 ? 19 : intKey;
-                iLength = (intKey + Encoding.ASCII.GetBytes(key.Substring(i, 1))[0])+ (intKey * envertido);
+                iLength = (intKey + Encoding.ASCII.GetBytes(key.Substring(i, 1))[0]) + (intKey * envertido);
                 strTemporal = iLength.ToString("X").PadLeft(2, '0');
                 keyEncriptado = keyEncriptado + strTemporal.Substring(strTemporal.Length - 2, 2);
                 intKey--;

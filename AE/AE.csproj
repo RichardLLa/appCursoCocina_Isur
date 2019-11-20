@@ -42,9 +42,8 @@
   <ItemGroup>
     <Compile Include="aeControlError.cs" />
     <Compile Include="aeMenu.cs" />
-    <Compile Include="aeModulo.cs" />
-    <Compile Include="aePersona.cs" />
-    <Compile Include="aeRol.cs" />
+    <Compile Include="aePerson.cs" />
+    <Compile Include="aeRole.cs" />
     <Compile Include="aeSesion.cs" />
     <Compile Include="aeUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

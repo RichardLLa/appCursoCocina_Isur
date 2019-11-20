@@ -15,3 +15,11 @@ C:\Users\Richard\Desktop\App_AcademicManagement\UI2\obj\Debug\UI2.frmManagePermi
 C:\Users\Richard\Desktop\App_AcademicManagement\UI2\obj\Debug\UI2.csproj.GenerateResource.Cache
 C:\Users\Richard\Desktop\App_AcademicManagement\UI2\obj\Debug\UI2.dll
 C:\Users\Richard\Desktop\App_AcademicManagement\UI2\obj\Debug\UI2.pdb
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\bin\Debug\UI2.dll
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\bin\Debug\UI2.pdb
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.csprojAssemblyReference.cache
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.frmManagePermissions.resources
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.csproj.GenerateResource.cache
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.csproj.CopyComplete
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.dll
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.pdb

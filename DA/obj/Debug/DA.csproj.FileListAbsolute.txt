@@ -12,3 +12,11 @@ C:\Users\Richard\Desktop\App_AcademicManagement\DA\bin\Debug\AE.pdb
 C:\Users\Richard\Desktop\App_AcademicManagement\DA\obj\Debug\DA.csprojResolveAssemblyReference.cache
 C:\Users\Richard\Desktop\App_AcademicManagement\DA\obj\Debug\DA.dll
 C:\Users\Richard\Desktop\App_AcademicManagement\DA\obj\Debug\DA.pdb
+E:\Cursos\Escritorio\App_AcademicManagement\DA\bin\Debug\DA.dll
+E:\Cursos\Escritorio\App_AcademicManagement\DA\bin\Debug\DA.pdb
+E:\Cursos\Escritorio\App_AcademicManagement\DA\bin\Debug\AE.dll
+E:\Cursos\Escritorio\App_AcademicManagement\DA\bin\Debug\AE.pdb
+E:\Cursos\Escritorio\App_AcademicManagement\DA\obj\Debug\DA.csprojAssemblyReference.cache
+E:\Cursos\Escritorio\App_AcademicManagement\DA\obj\Debug\DA.csproj.CopyComplete
+E:\Cursos\Escritorio\App_AcademicManagement\DA\obj\Debug\DA.dll
+E:\Cursos\Escritorio\App_AcademicManagement\DA\obj\Debug\DA.pdb

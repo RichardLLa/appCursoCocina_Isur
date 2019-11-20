@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace AE
 {
-    public class aeMenu
+    public class aeRole
     {
-        public int IdMenu { get; set; }
+        public int IdRole { get; set; }
         public string Name { get; set; }
-        public string IdApplication { get; set; }
         public bool Estate { get; set; }
-        public int Level { get; set; }
-        
+        public List<aeMenu> Menus { get; set; }
     }
 }

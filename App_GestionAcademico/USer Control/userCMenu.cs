@@ -36,7 +36,7 @@ namespace App_AcademicManagement
             IdModulo = idModulo;
             foreach (var item in menus)
             {
-                dicMenus.Add(item,Agregar(item.Descripcion, item.Codigo,item.Objeto));
+                dicMenus.Add(item,Agregar(item.Name, item.IdApplication,item.Objeto));
             }
         }
         public void VerificarEspacio()

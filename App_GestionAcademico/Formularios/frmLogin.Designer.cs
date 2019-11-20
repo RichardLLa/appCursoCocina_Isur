@@ -183,7 +183,7 @@
             // picUser
             // 
             this.picUser.Image = global::App_AcademicManagement.Properties.Resources.user;
-            this.picUser.Location = new System.Drawing.Point(46, 174);
+            this.picUser.Location = new System.Drawing.Point(46, 177);
             this.picUser.Name = "picUser";
             this.picUser.Size = new System.Drawing.Size(32, 32);
             this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;

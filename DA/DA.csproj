@@ -46,8 +46,8 @@
     <Compile Include="daConnection.cs" />
     <Compile Include="Seguridad\daMenu.cs" />
     <Compile Include="Seguridad\daModulo.cs" />
-    <Compile Include="Seguridad\daPersona.cs" />
-    <Compile Include="Seguridad\daRol.cs" />
+    <Compile Include="Seguridad\daPerson.cs" />
+    <Compile Include="Seguridad\daRole.cs" />
     <Compile Include="Seguridad\daSesion.cs" />
     <Compile Include="Seguridad\daUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

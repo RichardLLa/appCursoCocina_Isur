@@ -11,7 +11,7 @@ namespace DA
 {
     public class daUser
     {
-        public void CreateUser(aeUser pUser)
+        public static bool CreateUser(aeUser pUser,ref string pResult )
         {
             SqlConnection oCnnData = daConnection.Connect();
             try
@@ -20,18 +20,27 @@ namespace DA
                 oCmd.Connection = oCnnData;
                 oCmd.CommandType = CommandType.StoredProcedure;
                 oCmd.CommandText = "spUsuarioInsert";
-                oCmd.Parameters.AddWithValue("@Usuario", pUser.Usuario);
-                oCmd.Parameters.AddWithValue("@Contraseña", pUser.Contraseña);
-                oCmd.ExecuteNonQuery();
+                oCmd.Parameters.AddWithValue("@Alias", pUser.Alias);
+                oCmd.Parameters.AddWithValue("@Password", pUser.Password);
+                //oCmd.Parameters.AddWithValue("@Result", pResult);
+                int e = oCmd.ExecuteNonQuery();
                 oCnnData.Close();
+                if (e == 1)
+                {
+                    return true;
+                }
+                else {
+                    pResult = "Usuario no encontrado";
+                }
             }
             catch (Exception ex)
             {
                 oCnnData.Close();
-                throw new Exception(ex.Message);
+                pResult = ex.Message;
             }
+            return false;
         }
-        public void CambiarContraseña(aeUser pUser)
+        public static bool CambiarContraseña(aeUser pUser,ref string result)
         {
             SqlConnection oCnnData = daConnection.Connect();
             try
@@ -39,20 +48,24 @@ namespace DA
                 SqlCommand oCmd = new SqlCommand();
                 oCmd.Connection = oCnnData;
                 oCmd.CommandType = CommandType.StoredProcedure;
-                oCmd.CommandText = "spUsuarioUpdateContraseña";
-                oCmd.Parameters.AddWithValue("@Usuario", pUser.Usuario);
-                oCmd.Parameters.AddWithValue("@Contraseña", pUser.Contraseña);
-                oCmd.ExecuteNonQuery();
+                oCmd.CommandText = "spUsuarioUpdatePassword";
+                oCmd.Parameters.AddWithValue("@Alias", pUser.Alias);
+                oCmd.Parameters.AddWithValue("@Password", pUser.Password);
+                if (oCmd.ExecuteNonQuery() == 1)
+                {
+                    return true;
+                }
+                result = "El nombre de usuario no existe";
                 oCnnData.Close();
-                return;
             }
             catch (Exception ex)
             {
                 oCnnData.Close();
-                throw new Exception(ex.Message);
+               result = ex.Message;
             }
+            return false;
         }
-        public aeUser GetData(int pIdUsuario)
+        public static aeUser GetData(int pIdUsuario)
         {
             aeUser oRow = new aeUser();
             SqlConnection oCnnData = new SqlConnection();
@@ -67,15 +80,54 @@ namespace DA
             oRdr = oCmd.ExecuteReader();
             while (oRdr.Read())
             {
-                oRow.IdUsuario = Convert.ToInt16(oRdr["IdUsuario"]);
-                oRow.Usuario = (oRdr["Usuario"] == DBNull.Value) ? null : oRdr["Usuario"].ToString();
-                oRow.Contraseña = (oRdr["Contraseña"] == DBNull.Value) ? null : oRdr["Contraseña"].ToString();
-                oRow.Estado = (oRdr["Estado"] == DBNull.Value) ? false : Convert.ToBoolean(oRdr["Estado"]);
-                oRow.IdPersona = (oRdr["IdPersona"] == DBNull.Value) ? 0 :Convert.ToInt16 (oRdr["IdPersona"]);
+                oRow.IdUser = Convert.ToInt16(oRdr["IdUsuario"]);
+                oRow.Alias = (oRdr["Usuario"] == DBNull.Value) ? null : oRdr["Usuario"].ToString();
+                oRow.Password = (oRdr["Contraseña"] == DBNull.Value) ? null : oRdr["Contraseña"].ToString();
+                oRow.Estate = (oRdr["Estado"] == DBNull.Value) ? false : Convert.ToBoolean(oRdr["Estado"]);
+                oRow.IdPerson = (oRdr["IdPersona"] == DBNull.Value) ? 0 :Convert.ToInt16 (oRdr["IdPersona"]);
             }
             oCnnData.Close();
             return oRow;
         }
-        
+        public static aeUser GetData(string pAlias,string pPassword, ref string result)
+        {
+            SqlConnection oCnnData = daConnection.Connect();
+            try
+            {
+                aeUser oRow = new aeUser();
+                SqlCommand oCmd = new SqlCommand();
+                oCmd.Connection = oCnnData;
+                oCmd.CommandType = CommandType.StoredProcedure;
+                oCmd.CommandText = "spUsuarioLogin";
+                oCmd.Parameters.Clear();
+                oCmd.Parameters.AddWithValue("@pAlias", pAlias);
+                oCmd.Parameters.AddWithValue("@pPassword", pPassword);
+                SqlDataReader oRdr;
+                oRdr = oCmd.ExecuteReader();
+                if (oRdr.Read())
+                {
+                    oRow.FirtsName = (oRdr["FirtsName"] == DBNull.Value) ? null : oRdr["FirtsName"].ToString();
+                    oRow.LastName = (oRdr["LastName"] == DBNull.Value) ? null : oRdr["LastName"].ToString();
+                    oRow.NroDocument = (oRdr["NroDocument"] == DBNull.Value) ? null : oRdr["NroDocument"].ToString();
+                    oRow.IdUser = Convert.ToInt16(oRdr["IdUser"]);
+                    oRow.Alias = (oRdr["Alias"] == DBNull.Value) ? null : oRdr["Alias"].ToString();
+                    oRow.Password = (oRdr["Password"] == DBNull.Value) ? null : oRdr["Password"].ToString();
+                    oRow.Estate = Convert.ToInt16(oRdr["Estate"]) == 1 ? true : false;
+                    oRow.IdPerson = Convert.ToInt16(oRdr["IdPerson"]);
+                    oRow.RowVersion = (oRdr["RowVersion"] == DBNull.Value) ? null : oRdr["RowVersion"].ToString();
+                    oCnnData.Close();
+                    return oRow;
+                }
+                result = "Usuario incorrecto";
+            }
+            catch (Exception ex)
+            {
+                result = ex.Message;
+
+            }
+            oCnnData.Close();
+            return null;
+        }
+
     }
 }

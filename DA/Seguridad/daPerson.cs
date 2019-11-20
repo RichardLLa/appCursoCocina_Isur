@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace DA
 {
-    public class daPersona
+    public class daPerson
     {
-        public aePersona GetData(int pIdPersona)
+        public static aePerson GetData(int pIdPersona)
         {
-            aePersona oRow = new aePersona();
+            aePerson oRow = new aePerson();
             SqlConnection oCnnData = daConnection.Connect();
             SqlCommand oCmd = new SqlCommand();
             oCmd.CommandType = CommandType.StoredProcedure;
@@ -25,12 +25,12 @@ namespace DA
             oRdr = oCmd.ExecuteReader();
             while (oRdr.Read())
             {
-                oRow.IdPersona = Convert.ToInt16(oRdr["IdPersona"].ToString());
-                oRow.Nombre = (oRdr["Nombre"] == DBNull.Value) ? null : oRdr["Nombre"].ToString();
-                oRow.Apellidos = (oRdr["Apellidos"] == DBNull.Value) ? null : oRdr["Apellidos"].ToString();
+                oRow.IdPerson = Convert.ToInt16(oRdr["IdPersona"].ToString());
+                oRow.FirtsName = (oRdr["Nombre"] == DBNull.Value) ? null : oRdr["Nombre"].ToString();
+                oRow.LastName = (oRdr["Apellidos"] == DBNull.Value) ? null : oRdr["Apellidos"].ToString();
                 oRow.Telefono = (oRdr["Telefono"] == DBNull.Value) ? null : oRdr["Telefono"].ToString();
                 oRow.Documento = (oRdr["Documento"] == DBNull.Value) ? null : oRdr["Documento"].ToString();
-                oRow.NroDocumento = (oRdr["NroDocumento"] == DBNull.Value) ? null: oRdr["NroDocumento"].ToString();
+                oRow.NroDocument = (oRdr["NroDocumento"] == DBNull.Value) ? null: oRdr["NroDocumento"].ToString();
                 oRow.Correo = (oRdr["Correo"] == DBNull.Value) ?null : oRdr["Correo"].ToString();
             }
             oCnnData.Close();
