@@ -87,12 +87,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="USer Control\userCMenu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="USer Control\userCMenu.Designer.cs">
-      <DependentUpon>userCMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="USer Control\UserCInicio.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -121,9 +115,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="USer Control\userCMenu.resx">
-      <DependentUpon>userCMenu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="USer Control\UserCInicio.resx">
       <DependentUpon>UserCInicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +207,153 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opeSal2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacMen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacMen2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacRol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacRol2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacUsu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacUsu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opeEnt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opEnt2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opeSal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regCur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regCur2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regPro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regPro2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regRec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regRec2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regCurAgr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regCurAgr2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-libreta-de-ahorros-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacMenAdm2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacRMenAdm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacRolAdm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacRolAdm2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacRolAgr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacRolAgr2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacUsuAdm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacUsuAdm2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacUsuAgr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacUsuAgr2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-asignación-de-curso-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-asignación-de-curso-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regProAdm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regProAdm2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regProAgr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regProAgr2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regRecAdm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regRecAdm2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regRecAgr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regRecAgr2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opeEntCur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opeEntCur2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opeEntOtr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opeEntOtr2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opeEntPro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opeEntPro2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opeSalCur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opeSalCur2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opeSalOtr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opeSalOtr2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

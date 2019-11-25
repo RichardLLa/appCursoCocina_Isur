@@ -17,18 +17,20 @@ namespace DA
             try
             {
                 List<aeRole> oLista = new List<aeRole>();
-                SqlCommand oCmd = new SqlCommand("spRoleSelectIdUser", oCnnData);
+                SqlCommand oCmd = new SqlCommand("uspRoleSelectIdUser", oCnnData);
                 oCmd.CommandType = CommandType.StoredProcedure;
                 oCmd.Parameters.Clear();
                 oCmd.Parameters.AddWithValue("@pIdUser", pIdUser);
+                oCmd.Parameters.Add("@pResult", SqlDbType.NVarChar,250).Direction = ParameterDirection.Output;
+                //oCmd.Parameters.AddWithValue("@NROINSCRITOS", DbType.Int32);
                 SqlDataReader oRdr;
                 oRdr = oCmd.ExecuteReader();
                 while (oRdr.Read())
                 {
                     aeRole oRow = new aeRole();
-                    oRow.IdRole = Convert.ToInt16(oRdr["IdRol"].ToString());
-                    oRow.Name = (oRdr["Nombre"] == DBNull.Value) ? "" : oRdr["Nombre"].ToString();
-                    oRow.Estate = (oRdr["Estado"] == DBNull.Value) ? false : Convert.ToBoolean(oRdr["Estado"]);
+                    oRow.IdRole = Convert.ToInt16(oRdr["IdRole"].ToString());
+                    oRow.Name = (oRdr["Name"] == DBNull.Value) ? "" : oRdr["Name"].ToString();
+                    oRow.Estate = (oRdr["Estate"] == DBNull.Value) ? false : Convert.ToBoolean(oRdr["Estate"]);
                     oLista.Add(oRow);
                 }
                 if (oLista.Count > 0)
@@ -36,7 +38,8 @@ namespace DA
                     oCnnData.Close();
                     return oLista;
                 }
-                pResult = "El usuario no tienen ningun ROL asignado, consulte con el administrador.";
+                //pResult = "El usuario no tienen ningun ROL asignado, consulte con el administrador.";
+                pResult = oCmd.Parameters["@pResult"].Value.ToString();
             }
             catch (Exception ex)
             {

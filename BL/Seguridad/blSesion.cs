@@ -15,25 +15,19 @@ namespace BL
         {
             return oSesion.ValidateUser(pUser,pPassword,ref result);
         } 
-        public aeSession Login(string pUser, string pPassword, ref string pResult)
+        public aeSession Login(string pAlias, string pPassword, ref string pResult)
         {
             pResult = null;
             aeSession sesion = new aeSession();
 
             //Recopilar informacion del usuario
             blUser user = new blUser();
-            sesion.User = user.GetRow(pUser, pPassword, ref pResult);
+            sesion.User = user.GetRow(pAlias, pPassword, ref pResult);
+            if (pResult != null) return null;
 
-            //Recopilar informacion de los roles
-            
-
-            //Recopilar informacion de los modulos
-            daModulo modulosesion = new daModulo();
-            sesion.Modulos = modulosesion.GetData(pUser.IdUser);
-
-            //Recopilar informacion de los menus
-            daMenu menusesion = new daMenu();
-            sesion.Menus = menusesion.GetData(pUser.IdUser);
+            //obtener los menus
+            blMenu menu = new blMenu();
+            sesion.ListMenuGranted = menu.GetRows(sesion.User.IdUser, ref pResult);
             return sesion;
         }
         public bool CerrarSesion(aeSession pSesion)

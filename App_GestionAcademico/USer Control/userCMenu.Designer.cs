@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userCMenu));
             this.pnlMen = new System.Windows.Forms.Panel();
-            this.lblMen = new System.Windows.Forms.Label();
             this.picMen = new System.Windows.Forms.PictureBox();
+            this.lblMen = new System.Windows.Forms.Label();
             this.pnlMen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMen)).BeginInit();
             this.SuspendLayout();
@@ -42,21 +42,10 @@
             this.pnlMen.BackColor = System.Drawing.Color.RoyalBlue;
             this.pnlMen.Controls.Add(this.picMen);
             this.pnlMen.Controls.Add(this.lblMen);
-            this.pnlMen.Location = new System.Drawing.Point(435, 210);
+            this.pnlMen.Location = new System.Drawing.Point(417, 233);
             this.pnlMen.Name = "pnlMen";
             this.pnlMen.Size = new System.Drawing.Size(222, 119);
             this.pnlMen.TabIndex = 2;
-            // 
-            // lblMen
-            // 
-            this.lblMen.AutoSize = true;
-            this.lblMen.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMen.ForeColor = System.Drawing.Color.White;
-            this.lblMen.Location = new System.Drawing.Point(16, 13);
-            this.lblMen.Name = "lblMen";
-            this.lblMen.Size = new System.Drawing.Size(92, 19);
-            this.lblMen.TabIndex = 0;
-            this.lblMen.Text = "Customers:";
             // 
             // picMen
             // 
@@ -69,6 +58,17 @@
             this.picMen.TabIndex = 2;
             this.picMen.TabStop = false;
             // 
+            // lblMen
+            // 
+            this.lblMen.AutoSize = true;
+            this.lblMen.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMen.ForeColor = System.Drawing.Color.White;
+            this.lblMen.Location = new System.Drawing.Point(16, 13);
+            this.lblMen.Name = "lblMen";
+            this.lblMen.Size = new System.Drawing.Size(92, 19);
+            this.lblMen.TabIndex = 0;
+            this.lblMen.Text = "Customers:";
+            // 
             // userCMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -76,7 +76,7 @@
             this.Controls.Add(this.pnlMen);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "userCMenu";
-            this.Size = new System.Drawing.Size(707, 365);
+            this.Size = new System.Drawing.Size(689, 388);
             this.Resize += new System.EventHandler(this.userCMenu_Resize);
             this.pnlMen.ResumeLayout(false);
             this.pnlMen.PerformLayout();

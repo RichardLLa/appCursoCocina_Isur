@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Seguridad\aeRole.cs" />
     <Compile Include="Seguridad\blRole.cs" />
     <Compile Include="Seguridad\blPerson.cs" />
     <Compile Include="Seguridad\blMenu.cs" />

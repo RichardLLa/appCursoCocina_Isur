@@ -10,10 +10,9 @@ namespace BL
 {
     public class blPerson
     {
-        daPerson oDA = new daPerson();
         public aePerson GetRow(int pIdPersona)
         {
-            return oDA.GetData(pIdPersona);
+            return daPerson.GetData(pIdPersona);
         }
     }
 }

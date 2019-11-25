@@ -45,7 +45,6 @@
     <Compile Include="Seguridad\daComponente.cs" />
     <Compile Include="daConnection.cs" />
     <Compile Include="Seguridad\daMenu.cs" />
-    <Compile Include="Seguridad\daModulo.cs" />
     <Compile Include="Seguridad\daPerson.cs" />
     <Compile Include="Seguridad\daRole.cs" />
     <Compile Include="Seguridad\daSesion.cs" />

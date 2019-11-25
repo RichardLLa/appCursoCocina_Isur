@@ -79,7 +79,7 @@ namespace App_AcademicManagement
                 else
                 {
 
-                    if (oBlUser.CambiarContraseña(oAeUser, ref result))
+                    if (oBlUser.PasswordChange(oAeUser, ref result))
                     {
                         MetroMessageBox.Show(this,"Contraseña actualizada", "Correcto!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -155,27 +155,28 @@ namespace App_AcademicManagement
             //int? Iduser = oBlsession.ValidateUser(_user, _pwd, ref result);
             aeSession userSession = oBlsession.Login(_user, _pwd, ref result);
 
-            if (Iduser == null)
+            if (result != null)
             {
                 MetroMessageBox.Show(this, result, "ATENCION!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else{
+                frmCargaInicial program = null;
                 try
                 {
                     this.DialogResult = DialogResult.OK;
                     this.Visible = false;
                     txtPasword.Text = string.Empty;
-                    frmCargaInicial program = new frmCargaInicial(Convert.ToInt16(Iduser));
+                    program = new frmCargaInicial(userSession);
                     program.ShowDialog();
-                    this.Visible = true;
                     program.Close();
-                    program.Dispose();
+
                 }
                 catch (Exception)
                 {
                     MetroMessageBox.Show(this, "Error al cargar la pantalla principal", "ERROR FATAL!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
+                this.Visible = true;
+                program.Dispose();
             }
         }
 

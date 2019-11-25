@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace AE
 {
-    public class aeSession
+    public  class aeSession
     {
-        public aeUser User { get; set; }
-        public int nivel { get; set; }
-        public DateTime Date { get; set; }
-        public int NroSession { get; set; }
+        public  aeUser User { get; set; }
+        public  List<aeMenu> ListMenuGranted { get; set; }
+        public  int nivel { get; set; }
+        public  DateTime Date { get; set; }
+        public  int NroSession { get; set; }
     }
 }

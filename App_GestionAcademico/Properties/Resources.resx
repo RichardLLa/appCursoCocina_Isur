@@ -175,4 +175,151 @@
   <data name="frmPerRol2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frmPerRol2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="opeEnt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\opeEnt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="opeEnt2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\opEnt2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="opeSal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\opeSal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="opeSal2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\opeSal2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bacMen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bacMen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bacMen2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bacMen2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bacRol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bacRol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bacRol2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bacRol2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bacUsu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bacUsu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bacUsu2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bacUsu2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="regCurAgr2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-libreta-de-ahorros-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="regCur" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\regCur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="regCur2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\regCur2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="regCurAgr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\regCurAgr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="regPro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\regPro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="regPro2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\regPro2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="regRec" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\regRec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="regRec2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\regRec2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>regCurAgr2</value>
+  </data>
+  <data name="bacMenAdm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bacRMenAdm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bacMenAdm2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bacMenAdm2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bacRolAdm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bacRolAdm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bacRolAdm2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bacRolAdm2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bacRolAgr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bacRolAgr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bacRolAgr2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bacRolAgr2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bacUsuAdm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bacUsuAdm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bacUsuAdm2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bacUsuAdm2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bacUsuAgr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bacUsuAgr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bacUsuAgr2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bacUsuAgr2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="opeEntCur" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\opeEntCur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="opeEntCur2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\opeEntCur2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="opeEntOtr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\opeEntOtr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="opeEntOtr2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\opeEntOtr2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="opeEntPro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\opeEntPro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="opeEntPro2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\opeEntPro2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="opeSalCur" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\opeSalCur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="opeSalCur2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\opeSalCur2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="opeSalOtr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\opeSalOtr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="opeSalOtr2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\opeSalOtr2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="regCurAdm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-asignación-de-curso-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="regCurAdm2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-asignación-de-curso-50 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="regProAdm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\regProAdm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="regProAdm2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\regProAdm2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="regProAgr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\regProAgr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="regProAgr2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\regProAgr2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="regRecAdm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\regRecAdm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="regRecAdm2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\regRecAdm2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="regRecAgr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\regRecAgr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="regRecAgr2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\regRecAgr2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

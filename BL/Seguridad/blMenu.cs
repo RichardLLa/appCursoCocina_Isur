@@ -10,14 +10,9 @@ namespace BL
 {
     public class blMenu
     {
-        daMenu oDA = new daMenu();
-        public List<aeMenu> GetRows(int pIdRole, ref string pResult)
+        public List<aeMenu> GetRows(int pIdUser, ref string pResult)
         {
-            List<aeMenu> oList = daMenu.GetData(pIdRole, ref pResult);
-            foreach (var item in oList)
-            {
-                blMenu blMenu
-            }
+            List<aeMenu> oList = daMenu.GetDataByUser(pIdUser, ref pResult);
             return oList;
         }
     }

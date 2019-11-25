@@ -44,9 +44,9 @@ namespace DA
             }
             return null;
         }
-        public aeSession Login(string pUser, string pPassword, ref string result)
+        public  aeSession Login(string pUser, string pPassword, ref string result)
         {
-            
+            return null;
         }
 
         public bool CerrarSesion(aeSession pSesion)

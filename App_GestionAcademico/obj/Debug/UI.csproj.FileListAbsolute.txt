@@ -79,9 +79,10 @@ E:\Cursos\Escritorio\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_A
 E:\Cursos\Escritorio\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.frmManagePermissions.resources
 E:\Cursos\Escritorio\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.frmSplash.resources
 E:\Cursos\Escritorio\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.Properties.Resources.resources
-E:\Cursos\Escritorio\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.userCMenu.resources
 E:\Cursos\Escritorio\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.UserCInicio.resources
 E:\Cursos\Escritorio\App_AcademicManagement\App_GestionAcademico\obj\Debug\UI.csproj.GenerateResource.cache
 E:\Cursos\Escritorio\App_AcademicManagement\App_GestionAcademico\obj\Debug\UI.csproj.CopyComplete
 E:\Cursos\Escritorio\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.exe
 E:\Cursos\Escritorio\App_AcademicManagement\App_GestionAcademico\obj\Debug\App_AcademicManagement.pdb
+E:\Cursos\Escritorio\App_AcademicManagement\App_GestionAcademico\bin\Debug\System.Windows.Forms.Ribbon.dll
+E:\Cursos\Escritorio\App_AcademicManagement\App_GestionAcademico\bin\Debug\System.Windows.Forms.Ribbon35.dll

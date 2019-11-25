@@ -23,8 +23,8 @@ namespace AE
         public bool Estate { get; set; }
         public string RowVersion { get; set; }
         public List<aeRole> ListRoles { get; set; }
-        public List<aeMenu> MenusGranted { get; set; }
-        public List<aeMenu> MenusDenegated { get; set; }
+        //public List<aeMenu> MenusGranted { get; set; }
+        //public List<aeMenu> MenusDenegated { get; set; }
 
     }
 }

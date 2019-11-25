@@ -1,146 +1,262 @@
 ﻿using AE;
-using BL;
 using MetroFramework;
 using MetroFramework.Controls;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace App_AcademicManagement
 {
     public partial class frmCargaInicial : MetroFramework.Forms.MetroForm
     {
-        #region atributos
-        private Dictionary<MetroTile, aeModulo> DicModulos = new Dictionary<MetroTile, aeModulo>();
-        private aeSession SessionActivated = new    aeSession();
-        List<userCMenu> cmenuList = new List<userCMenu>();
-        #endregion
+        #region Constructor
         public frmCargaInicial()
         {
             InitializeComponent();
             CargarInicial();
         }
-        public frmCargaInicial(aeUser user)
+        public frmCargaInicial(aeSession pSession)
         {
-            blSession oAe = new blSession();
-            SessionActivated = oAe.Login(user);
+            SessionActivated = pSession;
             InitializeComponent();
             CargarInicial();
+            double result = this.Size.Width / 150;
+            NumPorX = Convert.ToInt16(Math.Floor(result));
         }
-        public frmCargaInicial(int idUser)
-        {
-            blSession oAe = new blSession();
-            SessionActivated = oAe.IniciarSesion(user);
-            //InitializeComponent();
-            //CargarInicial();
-        }
-        private void CargarInicial()
-        {
-            ConstruirModulosPadre();
-            tsPeriodo.Text = DateTime.Now.Year.ToString();
-            userCInicio1.Nombre = SessionActivated.Persona.Nombre +" "+ SessionActivated.Persona.Apellidos;
-            userCInicio1.Detalle =  "Detalles:";
-        }
-        public void ContruirMenus()
-        {
-            ConstruirModulo();
-            ConstruirMenu();
-        }
+        #endregion
 
-        private void ConstruirModulosPadre()
-        {
-            throw new NotImplementedException();
-        }
+        #region atributos
+        private static aeSession SessionActivated = new aeSession();
+        private Dictionary<MetroTile, int> dicModule = new Dictionary<MetroTile, int>();
+        private Dictionary<MetroTile, int> dictMenu = new Dictionary<MetroTile, int>();
+        private MetroTile objMtile = null;
+        private bool menuDesplazado;
+        private int NumPorX = 3;
+        private bool resize;
+        private int IdMenuClicked;
+        #endregion
 
-        private void ConstruirMenu()
+        #region Controles Dinamicos
+
+        #region metodos
+        
+        private void BuildTitle()
         {
-            foreach (var item in SessionActivated.Modulos)
+            int yPosition = 0;
+            foreach (var item in SessionActivated.ListMenuGranted.Where(n => n.Level == 1))
             {
-                List<aeMenu> aeMenu = new List<aeMenu>();
-                for (int i = 0; i < SessionActivated.Menus.Count; i++)
-                {
-                    if (SessionActivated.Menus[i].IdModulo == item.IdModulo)
-                    {
-                        aeMenu.Add(SessionActivated.Menus[i]);
-                    }
-                }
-                userCMenu cm = new userCMenu(aeMenu,item.IdModulo,this,this.ContenedorPrincipal);
-                cm.Size = this.ContenedorPrincipal.Size;
-                this.ContenedorPrincipal.Controls.Add(cm);
-                cm.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-                cmenuList.Add(cm);
+                ToolTip toolTip = new ToolTip();
+                toolTip.AutoPopDelay = 5000;
+                toolTip.InitialDelay = 1000;
+                toolTip.ReshowDelay = 500;
+                toolTip.ShowAlways = true;
+                MetroButton btnTitulo = new MetroButton();
+                btnTitulo.FontSize = MetroButtonSize.Medium;
+                btnTitulo.Location = new Point(yPosition, 1);
+                btnTitulo.Size = new Size(120, 33);
+                btnTitulo.Style = MetroColorStyle.Orange;
+                btnTitulo.Text = item.Name;
+                btnTitulo.Cursor = Cursors.Hand;
+                btnTitulo.TabIndex = 1;
+                btnTitulo.Tag = item.IdMenu;
+                btnTitulo.Theme = MetroThemeStyle.Dark;
+                btnTitulo.UseSelectable = true;
+                toolTip.SetToolTip(btnTitulo, item.Name);
+                btnTitulo.Click += BtnTitulo_Click;
+                yPosition += 120;
+                pnlContenedorTitulo.Controls.Add(btnTitulo);
             }
+
         }
-
-        private void CargarSplash()
+        void BuildModule(int pIdParent, int pIdMenu, string pName, string pNameCode, int xAlto)
         {
-            frmSplash splash = new frmSplash();
-            splash.ShowDialog();
-        }
-
-        private void CargarSesion()
-        {
-            
-            
-        }
-
-        void ConstruirModulo()
-        {
-            blModulo oBLMod = new blModulo();
-            List<aeModulo> oLMod = oBLMod.GetRow(SessionActivated.User.IdUser);
-
             ToolTip toolTip = new ToolTip();
             toolTip.AutoPopDelay = 5000;
             toolTip.InitialDelay = 1000;
             toolTip.ReshowDelay = 500;
             toolTip.ShowAlways = true;
-            int alto = 0;
-            for (int x = 0; x < oLMod.Count(); x++)
-            {
-                alto += 50;
-                MetroTile metroTile = new MetroTile();
+            MetroTile metroTile = new MetroTile();
 
-                metroTile.Text = oLMod[x].Nombre;
-                metroTile.Tag = oLMod[x].IdModulo;
-                metroTile.TileImage = (Image)Properties.Resources.ResourceManager.GetObject(oLMod[x].Codigo);
-                metroTile.TileTextFontWeight = MetroTileTextWeight.Bold;
-                metroTile.Style = MetroColorStyle.Orange;
-                metroTile.Location = new Point(3, alto);
-                metroTile.Size = new Size(136, 43);
-                metroTile.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-                metroTile.Cursor = Cursors.Hand;
-                metroTile.TileImageAlign = ContentAlignment.MiddleCenter;
-                metroTile.TileTextFontSize = MetroTileTextSize.Medium;
-                metroTile.Click += MetroTile_Click;
-                metroTile.MouseEnter += MetroTile_GotFocus;
-                metroTile.MouseLeave += MetroTile_LostFocus;
-                toolTip.SetToolTip(metroTile, oLMod[x].Nombre);
-                DicModulos.Add(metroTile,oLMod[x] );
-                pnlMenuContenedor.Controls.Add(metroTile);
+            metroTile.Text = pName;
+            metroTile.Name = pNameCode;
+            metroTile.Tag = pIdMenu;
+            metroTile.TabIndex = 1;
+            metroTile.TileImage = (Image)Properties.Resources.ResourceManager.GetObject(pNameCode);
+            metroTile.TileTextFontWeight = MetroTileTextWeight.Bold;
+            metroTile.Style = MetroColorStyle.Orange;
+            metroTile.Location = new Point(3, xAlto);
+            metroTile.Size = new Size(136, 43);
+            //metroTile.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            metroTile.Cursor = Cursors.Hand;
+            metroTile.Cursor = Cursors.Hand;
+            metroTile.TileImageAlign = ContentAlignment.MiddleCenter;
+            metroTile.TileTextFontSize = MetroTileTextSize.Medium;
+            metroTile.Click += MetroTile_Click;
+            metroTile.MouseEnter += MetroTile_GotFocus;
+            metroTile.MouseLeave += MetroTile_LostFocus;
+            toolTip.SetToolTip(metroTile, pName);
+            dicModule.Add(metroTile, pIdParent);
+            pnlMenuContenedor2.Controls.Add(metroTile);
+            if (menuDesplazado)
+            {
+                CoupleMenu();
             }
         }
-
-        private void MetroTile_LostFocus(object sender, EventArgs e)
+        private void BuildMenu(int pIdParent, string pName, string pNameCode, int YPosition, int xPosition)
         {
-            MetroTile metroTile = (MetroTile)sender;
-            metroTile.TileImage = (Image)Properties.Resources.ResourceManager.GetObject(DicModulos[metroTile].Codigo);
+            ToolTip toolTip = new ToolTip();
+            toolTip.AutoPopDelay = 5000;
+            toolTip.InitialDelay = 1000;
+            toolTip.ReshowDelay = 500;
+            toolTip.ShowAlways = true;
+            MetroTile metroTile = new MetroTile();
+
+            pName = pName.Replace(" - ", "//-").Replace(" / ", "//-");
+            pName = pName.Replace("/-", "\n").Replace(" ", "\n");
+
+            metroTile.ActiveControl = null;
+            metroTile.Location = new Point(xPosition, YPosition);
+            metroTile.Cursor = Cursors.Hand;
+            metroTile.Name = pNameCode;
+            metroTile.Size = new Size(130, 110);
+            metroTile.Style = MetroColorStyle.Green;
+            metroTile.TabIndex = 3;
+            metroTile.Text = pName;
+            metroTile.Theme = MetroThemeStyle.Dark;
+            metroTile.TileImage = (Image)Properties.Resources.ResourceManager.GetObject(metroTile.Name);
+            metroTile.TileImageAlign = ContentAlignment.TopRight;
+            metroTile.TileTextFontWeight = MetroTileTextWeight.Bold;
+            metroTile.UseSelectable = true;
+            metroTile.UseTileImage = true;
+            metroTile.Click += MetroTileMenu_Click;
+            metroTile.MouseEnter += MetroTile_GotFocus;
+            metroTile.MouseLeave += MetroTile_LostFocus;
+
+            this.ContenedorPrincipal.Controls.Add(metroTile);
+            dictMenu.Add(metroTile, pIdParent);
+
         }
 
-        private void MetroTile_GotFocus(object sender, EventArgs e)
-        {
-            MetroTile metroTile = (MetroTile)sender;
-            metroTile.TileImage = (Image)Properties.Resources.ResourceManager.GetObject(DicModulos[metroTile].Codigo+"2");
-        }
+        
 
-        MetroTile objMtile = null;
+        void PlaceMenus(int pIdParent, int pNumByX)
+        {
+            int x = 10;
+            int y = 10;
+            int numByXCounter = 0;
+            foreach (var item in dictMenu.Where(n => n.Value == pIdParent))
+            {
+                numByXCounter++;
+                item.Key.Location = new Point(x, y);
+                if (numByXCounter >= pNumByX)
+                {
+                    x = 10;
+                    y += 130;
+                }
+                else
+                {
+                    x += 150;
+                }
+                ContenedorPrincipal.Controls.Add(item.Key);
+            }
+        }
+        private void CoupleMenu()
+        {
+            this.pnlMenu.Size = new Size(60, pnlMenu.Size.Height);
+            linkMenu.Image = Properties.Resources.kitchen2;
+            tltCerrarSesion.UseTileImage = true;
+            tltCerrarSesion.Text = "";
+            foreach (var item in dicModule.Keys)
+            {
+                item.Text = "";
+                item.UseTileImage = true;
+                item.Size = new Size(46, 43);
+            }
+            pnlMenuContenedor2.Refresh();
+        }
+        private void UncoupleMenu()
+        {
+            linkMenu.Image = Properties.Resources.kitchen;
+            this.pnlMenu.Size = new Size(150, pnlMenu.Size.Height);
+            tltCerrarSesion.UseTileImage = false;
+            tltCerrarSesion.Text = "Cerrar Sesión";
+            foreach (var item in dicModule.Keys)
+            {
+                item.Text = SessionActivated.ListMenuGranted.Where(n => n.IdMenu == Convert.ToInt16(item.Tag)).FirstOrDefault().Name;
+                item.UseTileImage = false;
+                item.Size = new Size(136, 43);
+            }
+            pnlMenuContenedor2.Refresh();
+        }
+        #endregion
+
+        #region eventos
+        private void MetroTileMenu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MetroTile menuClick = (MetroTile)sender;
+                MetroFramework.Forms.MetroForm oForm = new MetroFramework.Forms.MetroForm();
+                string dll = "UI2";
+                Assembly assCadena = Assembly.LoadFrom(AppDomain.CurrentDomain.BaseDirectory + dll + ".dll");
+                oForm = (MetroFramework.Forms.MetroForm)assCadena.CreateInstance( "UI2.frm_"+menuClick.Name);
+                //oForm.MdiParent = this;
+                oForm.Dock = DockStyle.Fill;
+                oForm.StartPosition = FormStartPosition.CenterParent;
+                oForm.BringToFront();
+                ContenedorPrincipal.Visible = false;
+                oForm.ShowDialog();
+                ContenedorPrincipal.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                //throw new Exception();
+            }
+        }
+        private void linkMenu_Click(object sender, EventArgs e)
+        {
+            if (menuDesplazado)
+            {
+                UncoupleMenu();
+
+            }
+            else
+            {
+                CoupleMenu();
+            }
+            menuDesplazado = !menuDesplazado;
+        }
+        private void BtnTitulo_Click(object sender, EventArgs e)
+        {
+            pnlMenuContenedor2.Controls.Clear();
+            ContenedorPrincipal.Controls.Clear();
+            MetroButton btnClick = (MetroButton)sender;
+            int idMenuParent = Convert.ToInt32(btnClick.Tag);
+            if (btnClick.TabIndex != 1)
+            {
+                foreach (var item in dicModule.Where(n => n.Value == idMenuParent))
+                {
+                    pnlMenuContenedor2.Controls.Add(item.Key);
+                }
+            }
+            else
+            {
+                int XPosition = 0;
+                foreach (var item in SessionActivated.ListMenuGranted.Where(n => n.Level == 2 && n.IdParent == idMenuParent))
+                {
+                    BuildModule(idMenuParent, item.IdMenu, item.Name, item.NameCode, XPosition);
+                    XPosition += 50;
+                }
+                btnClick.TabIndex = 2;
+            }
+        }
         private void MetroTile_Click(object sender, EventArgs e)
         {
+            ContenedorPrincipal.Controls.Clear();
             if (objMtile != null)
             {
                 if ((objMtile).Name != ((MetroTile)sender).Name)
@@ -149,73 +265,78 @@ namespace App_AcademicManagement
                     (objMtile).Refresh();
                 }
             }
-
             ((MetroTile)sender).Style = MetroColorStyle.Green;
             ((MetroTile)sender).Refresh();
-
             //strNomModulo = ((MetroTile)sender).Text;
             //strIdModulo = ((MetroTile)sender).Name;
             objMtile = (MetroTile)sender;
-            string idModul = objMtile.Tag.ToString();
-            foreach (var item in cmenuList)
+            int idMenu = Convert.ToInt32(objMtile.Tag);
+            IdMenuClicked = idMenu;
+            if (objMtile.TabIndex == 1)
             {
-                if (item.IdModulo.ToString() == idModul)
+                List<aeMenu> menuList = SessionActivated.ListMenuGranted.Where(n => n.Level == 3 && n.IdParent == idMenu).ToList();
+                int ypoint = 10;
+                int xpoint = 10;
+                int numByXCounter = 0;
+                foreach (var item in menuList)
                 {
-                    item.BringToFront();
+                    BuildMenu(idMenu, item.Name, item.NameCode, ypoint, xpoint);
+                    if (numByXCounter + 1 >= NumPorX)
+                    {
+                        xpoint = 10;
+                        ypoint += 130;
+                    }
+                    else
+                    {
+                        xpoint += 150;
+                    }
+                    numByXCounter++;
                 }
-            }
-            //userCInicio1.SendToBack();
-        }
-
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-            frmManagePermissions control = new frmManagePermissions(this);
-            
-        }
-
-        private bool menuDesplazado;
-        private void linkMenu_Click(object sender, EventArgs e)
-        {
-            if (menuDesplazado)
-            {
-                linkMenu.Image = Properties.Resources.kitchen;
-                this.pnlMenu.Size = new Size(150, pnlMenu.Size.Height);
-                MenuDesacoplar();
-                tltCerrarSesion.UseTileImage = false;
-                tltCerrarSesion.Text = "Cerrar Sesión";
             }
             else
             {
-                this.pnlMenu.Size = new Size(60, pnlMenu.Size.Height);
-                linkMenu.Image = Properties.Resources.kitchen2;
-                MenuAcoplar();
-                tltCerrarSesion.UseTileImage = true;
-                tltCerrarSesion.Text = "";
+                PlaceMenus(idMenu, NumPorX);
             }
-            menuDesplazado = !menuDesplazado;
+            objMtile.TabIndex = 2;
+            resize = true;
         }
-        private void MenuAcoplar()
+        private void MetroTile_LostFocus(object sender, EventArgs e)
         {
-            for (int i = 0; i < DicModulos.Count; i++)
-            {
-                DicModulos.Keys.ElementAt(i).Text = "";
-                DicModulos.Keys.ElementAt(i).UseTileImage = true;
-                //DicModulos[DicModulos.Keys.ElementAt(i)].Text = "";
-                //DicModulos[DicModulos.Keys.ElementAt(i)].UseTileImage =true;
-
-            }
-        }
-        private void MenuDesacoplar()
-        {
-            for (int i = 0; i < DicModulos.Count; i++)
-            {
-                DicModulos.Keys.ElementAt(i).Text = DicModulos[DicModulos.Keys.ElementAt(i)].Nombre;
-                DicModulos.Keys.ElementAt(i).UseTileImage = false;
-                //DicModulos[DicModulos.Keys.ElementAt(i)].Text = DicModulos.Keys.ElementAt(i).Descripcion;
-                //DicModulos[DicModulos.Keys.ElementAt(i)].UseTileImage = false;
-            }
+            MetroTile metroTile = (MetroTile)sender;
+            metroTile.TileImage = (Image)Properties.Resources.ResourceManager.GetObject(metroTile.Name);
         }
 
+        private void MetroTile_GotFocus(object sender, EventArgs e)
+        {
+            MetroTile metroTile = (MetroTile)sender;
+            metroTile.TileImage = (Image)Properties.Resources.ResourceManager.GetObject(metroTile.Name + "2");
+        }
+        #endregion
+
+        #endregion
+
+        #region Metodos
+        private void CargarSplash()
+        {
+            frmSplash splash = new frmSplash();
+            splash.ShowDialog();
+        }
+        private void CargarInicial()
+        {
+            BuildTitle();
+            tsPeriodo.Text = DateTime.Now.Year.ToString();
+            userCInicio1.Nombre = SessionActivated.User.FirtsName + " " + SessionActivated.User.LastName;
+            userCInicio1.Detalle = "Detalles:";
+        }
+
+        #endregion
+
+        #region Eventos
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            frmManagePermissions control = new frmManagePermissions(this);
+
+        }
         private void frmCargaInicial_Load(object sender, EventArgs e)
         {
 
@@ -237,20 +358,18 @@ namespace App_AcademicManagement
             this.Close();
             //CargarLogin();
         }
-        private void CargarLogin()
+        private void ContenedorPrincipal_Resize(object sender, EventArgs e)
         {
-            this.Visible = false;
-            frmLogin login = new frmLogin();
-            if (login.ShowDialog() == DialogResult.OK)
+            //check size
+            double result = ContenedorPrincipal.Size.Width / 150;
+            int x = Convert.ToInt16(Math.Floor(result));
+            if (x != NumPorX && resize)
             {
-                //sesion del formulario login
-                this.Visible = true;
-            }
-            else
-            {
-                login.Dispose();
-                this.Close();
+                PlaceMenus(IdMenuClicked, x);
+                NumPorX = x;
             }
         }
+        #endregion
+
     }
 }

@@ -52,18 +52,144 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="frmOperaciones\frm_BusquedaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOperaciones\frm_BusquedaProveedor.Designer.cs">
+      <DependentUpon>frm_BusquedaProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm\frmManagePermissions.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm\frmManagePermissions.Designer.cs">
       <DependentUpon>frmManagePermissions.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBackend\frm_bacMenAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackend\frm_bacMenAdm.Designer.cs">
+      <DependentUpon>frm_bacMenAdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBackend\frm_bacRolAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackend\frm_bacRolAdm.Designer.cs">
+      <DependentUpon>frm_bacRolAdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBackend\frm_bacRolAgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackend\frm_bacRolAgr.Designer.cs">
+      <DependentUpon>frm_bacRolAgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBackend\frm_bacUsuAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackend\frm_bacUsuAdm.Designer.cs">
+      <DependentUpon>frm_bacUsuAdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBackend\frm_bacUsuAgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackend\frm_bacUsuAgr.Designer.cs">
+      <DependentUpon>frm_bacUsuAgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOperaciones\frm_opeEntCur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOperaciones\frm_opeEntCur.Designer.cs">
+      <DependentUpon>frm_opeEntCur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOperaciones\frm_opeEntOtr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOperaciones\frm_opeEntOtr.Designer.cs">
+      <DependentUpon>frm_opeEntOtr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOperaciones\frm_opeEntPro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOperaciones\frm_opeEntPro.Designer.cs">
+      <DependentUpon>frm_opeEntPro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOperaciones\frm_opeSalCur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOperaciones\frm_opeSalCur.Designer.cs">
+      <DependentUpon>frm_opeSalCur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOperaciones\frm_opeSalOtr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOperaciones\frm_opeSalOtr.Designer.cs">
+      <DependentUpon>frm_opeSalOtr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistros\frm_regCurAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistros\frm_regCurAdm.Designer.cs">
+      <DependentUpon>frm_regCurAdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistros\frm_regCurAgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistros\frm_regCurAgr.Designer.cs">
+      <DependentUpon>frm_regCurAgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistros\frm_regProAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistros\frm_regProAdm.Designer.cs">
+      <DependentUpon>frm_regProAdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistros\frm_regProAgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistros\frm_regProAgr.Designer.cs">
+      <DependentUpon>frm_regProAgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistros\frm_regRecAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistros\frm_regRecAdm.Designer.cs">
+      <DependentUpon>frm_regRecAdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistros\frm_regRecAgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistros\frm_regRecAgr.Designer.cs">
+      <DependentUpon>frm_regRecAgr.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmOperaciones\frm_BusquedaProveedor.resx">
+      <DependentUpon>frm_BusquedaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOperaciones\frm_opeEntCur.resx">
+      <DependentUpon>frm_opeEntCur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOperaciones\frm_opeEntPro.resx">
+      <DependentUpon>frm_opeEntPro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistros\frm_regCurAgr.resx">
+      <DependentUpon>frm_regCurAgr.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm\frmManagePermissions.resx">
       <DependentUpon>frmManagePermissions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="frmDocente\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

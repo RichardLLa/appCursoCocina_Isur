@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlMenu = new MetroFramework.Controls.MetroPanel();
+            this.pnlMenuContenedor2 = new MetroFramework.Controls.MetroPanel();
             this.pnlMenuContenedor = new MetroFramework.Controls.MetroPanel();
             this.tltCerrarSesion = new MetroFramework.Controls.MetroTile();
             this.linkMenu = new MetroFramework.Controls.MetroLink();
@@ -36,8 +37,8 @@
             this.tsNombre = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsPeriodo = new System.Windows.Forms.ToolStripStatusLabel();
             this.ContenedorPrincipal = new MetroFramework.Controls.MetroPanel();
+            this.pnlContenedorTitulo = new MetroFramework.Controls.MetroPanel();
             this.userCInicio1 = new App_AcademicManagement.UserCInicio();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.pnlMenu.SuspendLayout();
             this.pnlMenuContenedor.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -53,7 +54,7 @@
             this.pnlMenu.HorizontalScrollbarSize = 10;
             this.pnlMenu.Location = new System.Drawing.Point(20, 93);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(150, 287);
+            this.pnlMenu.Size = new System.Drawing.Size(150, 335);
             this.pnlMenu.Style = MetroFramework.MetroColorStyle.White;
             this.pnlMenu.TabIndex = 1;
             this.pnlMenu.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -61,12 +62,30 @@
             this.pnlMenu.VerticalScrollbarHighlightOnWheel = false;
             this.pnlMenu.VerticalScrollbarSize = 10;
             // 
+            // pnlMenuContenedor2
+            // 
+            this.pnlMenuContenedor2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlMenuContenedor2.HorizontalScrollbarBarColor = true;
+            this.pnlMenuContenedor2.HorizontalScrollbarHighlightOnWheel = false;
+            this.pnlMenuContenedor2.HorizontalScrollbarSize = 10;
+            this.pnlMenuContenedor2.Location = new System.Drawing.Point(0, 52);
+            this.pnlMenuContenedor2.Name = "pnlMenuContenedor2";
+            this.pnlMenuContenedor2.Size = new System.Drawing.Size(144, 223);
+            this.pnlMenuContenedor2.TabIndex = 4;
+            this.pnlMenuContenedor2.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.pnlMenuContenedor2.VerticalScrollbarBarColor = true;
+            this.pnlMenuContenedor2.VerticalScrollbarHighlightOnWheel = false;
+            this.pnlMenuContenedor2.VerticalScrollbarSize = 10;
+            // 
             // pnlMenuContenedor
             // 
             this.pnlMenuContenedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMenuContenedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMenuContenedor.Controls.Add(this.pnlMenuContenedor2);
             this.pnlMenuContenedor.Controls.Add(this.tltCerrarSesion);
             this.pnlMenuContenedor.Controls.Add(this.linkMenu);
             this.pnlMenuContenedor.HorizontalScrollbarBarColor = true;
@@ -74,7 +93,7 @@
             this.pnlMenuContenedor.HorizontalScrollbarSize = 10;
             this.pnlMenuContenedor.Location = new System.Drawing.Point(3, 3);
             this.pnlMenuContenedor.Name = "pnlMenuContenedor";
-            this.pnlMenuContenedor.Size = new System.Drawing.Size(144, 281);
+            this.pnlMenuContenedor.Size = new System.Drawing.Size(144, 329);
             this.pnlMenuContenedor.Style = MetroFramework.MetroColorStyle.Silver;
             this.pnlMenuContenedor.TabIndex = 2;
             this.pnlMenuContenedor.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -88,7 +107,7 @@
             this.tltCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tltCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tltCerrarSesion.Location = new System.Drawing.Point(3, 233);
+            this.tltCerrarSesion.Location = new System.Drawing.Point(3, 281);
             this.tltCerrarSesion.Name = "tltCerrarSesion";
             this.tltCerrarSesion.Size = new System.Drawing.Size(136, 43);
             this.tltCerrarSesion.Style = MetroFramework.MetroColorStyle.Silver;
@@ -105,6 +124,7 @@
             // linkMenu
             // 
             this.linkMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkMenu.Image = global::App_AcademicManagement.Properties.Resources.kitchen;
             this.linkMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.linkMenu.ImageSize = 32;
@@ -123,9 +143,9 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsNombre,
             this.tsPeriodo});
-            this.statusStrip1.Location = new System.Drawing.Point(20, 380);
+            this.statusStrip1.Location = new System.Drawing.Point(20, 428);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(677, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(711, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -148,44 +168,45 @@
             this.ContenedorPrincipal.HorizontalScrollbarSize = 10;
             this.ContenedorPrincipal.Location = new System.Drawing.Point(170, 93);
             this.ContenedorPrincipal.Name = "ContenedorPrincipal";
-            this.ContenedorPrincipal.Size = new System.Drawing.Size(527, 287);
+            this.ContenedorPrincipal.Size = new System.Drawing.Size(561, 335);
             this.ContenedorPrincipal.TabIndex = 6;
             this.ContenedorPrincipal.VerticalScrollbarBarColor = true;
             this.ContenedorPrincipal.VerticalScrollbarHighlightOnWheel = false;
             this.ContenedorPrincipal.VerticalScrollbarSize = 10;
+            this.ContenedorPrincipal.Resize += new System.EventHandler(this.ContenedorPrincipal_Resize);
+            // 
+            // pnlContenedorTitulo
+            // 
+            this.pnlContenedorTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlContenedorTitulo.HorizontalScrollbarBarColor = true;
+            this.pnlContenedorTitulo.HorizontalScrollbarHighlightOnWheel = false;
+            this.pnlContenedorTitulo.HorizontalScrollbarSize = 10;
+            this.pnlContenedorTitulo.Location = new System.Drawing.Point(20, 60);
+            this.pnlContenedorTitulo.Name = "pnlContenedorTitulo";
+            this.pnlContenedorTitulo.Size = new System.Drawing.Size(711, 33);
+            this.pnlContenedorTitulo.TabIndex = 0;
+            this.pnlContenedorTitulo.VerticalScrollbarBarColor = true;
+            this.pnlContenedorTitulo.VerticalScrollbarHighlightOnWheel = false;
+            this.pnlContenedorTitulo.VerticalScrollbarSize = 10;
             // 
             // userCInicio1
             // 
             this.userCInicio1.Detalle = null;
-            this.userCInicio1.Location = new System.Drawing.Point(69, 54);
+            this.userCInicio1.Location = new System.Drawing.Point(72, 82);
             this.userCInicio1.Name = "userCInicio1";
             this.userCInicio1.Nombre = null;
             this.userCInicio1.Size = new System.Drawing.Size(419, 152);
             this.userCInicio1.TabIndex = 2;
             // 
-            // metroPanel1
-            // 
-            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(20, 60);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(677, 33);
-            this.metroPanel1.TabIndex = 0;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
             // frmCargaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(717, 422);
+            this.ClientSize = new System.Drawing.Size(751, 470);
             this.Controls.Add(this.ContenedorPrincipal);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.metroPanel1);
+            this.Controls.Add(this.pnlContenedorTitulo);
             this.IsMdiContainer = true;
             this.Name = "frmCargaInicial";
             this.Text = "Sistema Integral de Gestión Empresarial";
@@ -213,6 +234,7 @@
         private MetroFramework.Controls.MetroTile tltCerrarSesion;
         private MetroFramework.Controls.MetroPanel ContenedorPrincipal;
         private UserCInicio userCInicio1;
-        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroPanel pnlContenedorTitulo;
+        private MetroFramework.Controls.MetroPanel pnlMenuContenedor2;
     }
 }
