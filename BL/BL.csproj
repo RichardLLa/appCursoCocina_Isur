@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="blCategory.cs" />
+    <Compile Include="blDetailOperation.cs" />
+    <Compile Include="blProduct.cs" />
     <Compile Include="Seguridad\blRole.cs" />
     <Compile Include="Seguridad\blPerson.cs" />
     <Compile Include="Seguridad\blMenu.cs" />

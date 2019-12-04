@@ -41,9 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="daDetailOperation.cs" />
+    <Compile Include="daProduct.cs" />
     <Compile Include="Control de errores\daControlError.cs" />
+    <Compile Include="daCategory.cs" />
     <Compile Include="Seguridad\daComponente.cs" />
-    <Compile Include="daConnection.cs" />
+    <Compile Include="Connection\daConnection.cs" />
     <Compile Include="Seguridad\daMenu.cs" />
     <Compile Include="Seguridad\daPerson.cs" />
     <Compile Include="Seguridad\daRole.cs" />

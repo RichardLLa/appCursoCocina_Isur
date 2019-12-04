@@ -23,3 +23,14 @@ E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.csproj.CopyComplet
 E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.dll
 E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.pdb
 E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.csprojAssemblyReference.cache
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.frmOperaciones.frm_BusquedaProveedor.resources
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.frm_opeEntCur.resources
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.frm_opeEntPro.resources
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.frm_regCurAgr.resources
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.Properties.Resources.resources
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\bin\Debug\AE.dll
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\bin\Debug\BL.dll
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\bin\Debug\DA.dll
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\bin\Debug\AE.pdb
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\bin\Debug\BL.pdb
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\bin\Debug\DA.pdb

@@ -191,6 +191,47 @@
   <ItemGroup>
     <Folder Include="frmDocente\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AE\AE.csproj">
+      <Project>{1d58eab7-a15a-4210-bf03-88d527038efc}</Project>
+      <Name>AE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{14bb0aba-2325-49f6-acf2-0a2859d261c5}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fru.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fru2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\fru.png" />
+    <Content Include="img\fru2.png" />
+    <None Include="Resources\Registro.png" />
+    <None Include="Resources\sal2.png" />
+    <None Include="Resources\sal.png" />
+    <None Include="Resources\pes2.png" />
+    <None Include="Resources\pes.png" />
+    <None Include="Resources\pan2.png" />
+    <None Include="Resources\pan.png" />
+    <None Include="Resources\lac2.png" />
+    <None Include="Resources\lac.png" />
+    <None Include="Resources\gra2.png" />
+    <None Include="Resources\gra.png" />
+    <None Include="Resources\edu2.png" />
+    <None Include="Resources\edu.png" />
+    <None Include="Resources\cer2.png" />
+    <None Include="Resources\cer.png" />
+    <None Include="Resources\beb2.png" />
+    <None Include="Resources\beb.png" />
+    <None Include="Resources\ape2.png" />
+    <None Include="Resources\ape.png" />
+    <None Include="Resources\car2.png" />
+    <None Include="Resources\car.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

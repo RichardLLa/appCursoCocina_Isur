@@ -203,20 +203,29 @@ namespace App_AcademicManagement
                 MetroFramework.Forms.MetroForm oForm = new MetroFramework.Forms.MetroForm();
                 string dll = "UI2";
                 Assembly assCadena = Assembly.LoadFrom(AppDomain.CurrentDomain.BaseDirectory + dll + ".dll");
-                oForm = (MetroFramework.Forms.MetroForm)assCadena.CreateInstance( "UI2.frm_"+menuClick.Name);
-                //oForm.MdiParent = this;
+                oForm = (MetroFramework.Forms.MetroForm)assCadena.CreateInstance("UI2.frm_"+menuClick.Name);
+                oForm.MdiParent = this;
                 oForm.Dock = DockStyle.Fill;
                 oForm.StartPosition = FormStartPosition.CenterParent;
                 oForm.BringToFront();
+                oForm.WindowState = FormWindowState.Maximized;
+                oForm.MaximizeBox = false;
+                oForm.MinimizeBox = false;
                 ContenedorPrincipal.Visible = false;
-                oForm.ShowDialog();
-                ContenedorPrincipal.Visible = true;
+                oForm.FormClosed += OForm_FormClosed;
+                oForm.Show();
             }
             catch (Exception ex)
             {
                 //throw new Exception();
             }
         }
+
+        private void OForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ContenedorPrincipal.Visible = true;
+        }
+
         private void linkMenu_Click(object sender, EventArgs e)
         {
             if (menuDesplazado)
@@ -373,3 +382,4 @@ namespace App_AcademicManagement
 
     }
 }
+ 

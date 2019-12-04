@@ -33,7 +33,7 @@ namespace BL
             //roles del usuario
 
             blRole rol = new blRole();
-            oRow.ListRoles = rol.GetRow(oRow.IdUser, ref pResult);
+            oRow.ListRoles = rol.GetRows(oRow.IdUser, ref pResult);
             return oRow;
         }
     }

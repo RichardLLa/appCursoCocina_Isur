@@ -11,7 +11,8 @@ namespace DA
     public static class daConnection
     {
         private static SqlConnection Conn;
-        private static readonly string strCnn = ConfigurationManager.ConnectionStrings["cnn"].ConnectionString;
+        //private static readonly string strCnn = ConfigurationManager.ConnectionStrings["cnn"].ConnectionString;
+        private static readonly string strCnn = "Data Source = .; Initial Catalog = CocinaIsur; Integrated Security = True";
 
         public static SqlConnection Connect()
         {

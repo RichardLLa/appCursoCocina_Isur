@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "App_GestionAcademico\UI.csproj", "{1BD1C8FE-0EA2-4D85-B962-45AB07531778}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlError", "ControlError\ControlError.csproj", "{A580E2DF-02E0-41A0-B7ED-E8F29B658915}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI2", "UI2\UI2.csproj", "{50DA969E-E2B4-4C3F-AE33-E24A4AB01946}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pruebas", "Pruebas\Pruebas.csproj", "{70BE12E5-CB92-4E6D-A15D-FC07C7F973FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,8 +47,15 @@ Global
 		{50DA969E-E2B4-4C3F-AE33-E24A4AB01946}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50DA969E-E2B4-4C3F-AE33-E24A4AB01946}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50DA969E-E2B4-4C3F-AE33-E24A4AB01946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70BE12E5-CB92-4E6D-A15D-FC07C7F973FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70BE12E5-CB92-4E6D-A15D-FC07C7F973FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70BE12E5-CB92-4E6D-A15D-FC07C7F973FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70BE12E5-CB92-4E6D-A15D-FC07C7F973FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17A160AC-C621-4006-B6BF-5492E5AB2A01}
 	EndGlobalSection
 EndGlobal

@@ -47,12 +47,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="aeControlError.cs" />
-    <Compile Include="aeMenu.cs" />
-    <Compile Include="aePerson.cs" />
-    <Compile Include="aeRole.cs" />
-    <Compile Include="aeSesion.cs" />
-    <Compile Include="aeUser.cs" />
+    <Compile Include="aeCategory.cs" />
+    <Compile Include="aeDeatailOperation.cs" />
+    <Compile Include="aeProduct.cs" />
+    <Compile Include="Security\aeControlError.cs" />
+    <Compile Include="Security\aeMenu.cs" />
+    <Compile Include="Security\aePerson.cs" />
+    <Compile Include="Security\aeRole.cs" />
+    <Compile Include="Security\aeSesion.cs" />
+    <Compile Include="Security\aeUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

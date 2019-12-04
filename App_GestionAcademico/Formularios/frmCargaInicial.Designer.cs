@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.pnlMenu = new MetroFramework.Controls.MetroPanel();
-            this.pnlMenuContenedor2 = new MetroFramework.Controls.MetroPanel();
             this.pnlMenuContenedor = new MetroFramework.Controls.MetroPanel();
+            this.pnlMenuContenedor2 = new MetroFramework.Controls.MetroPanel();
             this.tltCerrarSesion = new MetroFramework.Controls.MetroTile();
             this.linkMenu = new MetroFramework.Controls.MetroLink();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsNombre = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsPeriodo = new System.Windows.Forms.ToolStripStatusLabel();
             this.ContenedorPrincipal = new MetroFramework.Controls.MetroPanel();
-            this.pnlContenedorTitulo = new MetroFramework.Controls.MetroPanel();
             this.userCInicio1 = new App_AcademicManagement.UserCInicio();
+            this.pnlContenedorTitulo = new MetroFramework.Controls.MetroPanel();
             this.pnlMenu.SuspendLayout();
             this.pnlMenuContenedor.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -62,23 +62,6 @@
             this.pnlMenu.VerticalScrollbarHighlightOnWheel = false;
             this.pnlMenu.VerticalScrollbarSize = 10;
             // 
-            // pnlMenuContenedor2
-            // 
-            this.pnlMenuContenedor2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlMenuContenedor2.HorizontalScrollbarBarColor = true;
-            this.pnlMenuContenedor2.HorizontalScrollbarHighlightOnWheel = false;
-            this.pnlMenuContenedor2.HorizontalScrollbarSize = 10;
-            this.pnlMenuContenedor2.Location = new System.Drawing.Point(0, 52);
-            this.pnlMenuContenedor2.Name = "pnlMenuContenedor2";
-            this.pnlMenuContenedor2.Size = new System.Drawing.Size(144, 223);
-            this.pnlMenuContenedor2.TabIndex = 4;
-            this.pnlMenuContenedor2.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.pnlMenuContenedor2.VerticalScrollbarBarColor = true;
-            this.pnlMenuContenedor2.VerticalScrollbarHighlightOnWheel = false;
-            this.pnlMenuContenedor2.VerticalScrollbarSize = 10;
-            // 
             // pnlMenuContenedor
             // 
             this.pnlMenuContenedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -100,6 +83,23 @@
             this.pnlMenuContenedor.VerticalScrollbarBarColor = true;
             this.pnlMenuContenedor.VerticalScrollbarHighlightOnWheel = false;
             this.pnlMenuContenedor.VerticalScrollbarSize = 10;
+            // 
+            // pnlMenuContenedor2
+            // 
+            this.pnlMenuContenedor2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlMenuContenedor2.HorizontalScrollbarBarColor = true;
+            this.pnlMenuContenedor2.HorizontalScrollbarHighlightOnWheel = false;
+            this.pnlMenuContenedor2.HorizontalScrollbarSize = 10;
+            this.pnlMenuContenedor2.Location = new System.Drawing.Point(0, 52);
+            this.pnlMenuContenedor2.Name = "pnlMenuContenedor2";
+            this.pnlMenuContenedor2.Size = new System.Drawing.Size(144, 223);
+            this.pnlMenuContenedor2.TabIndex = 4;
+            this.pnlMenuContenedor2.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.pnlMenuContenedor2.VerticalScrollbarBarColor = true;
+            this.pnlMenuContenedor2.VerticalScrollbarHighlightOnWheel = false;
+            this.pnlMenuContenedor2.VerticalScrollbarSize = 10;
             // 
             // tltCerrarSesion
             // 
@@ -175,6 +175,15 @@
             this.ContenedorPrincipal.VerticalScrollbarSize = 10;
             this.ContenedorPrincipal.Resize += new System.EventHandler(this.ContenedorPrincipal_Resize);
             // 
+            // userCInicio1
+            // 
+            this.userCInicio1.Detalle = null;
+            this.userCInicio1.Location = new System.Drawing.Point(72, 82);
+            this.userCInicio1.Name = "userCInicio1";
+            this.userCInicio1.Nombre = null;
+            this.userCInicio1.Size = new System.Drawing.Size(419, 152);
+            this.userCInicio1.TabIndex = 2;
+            // 
             // pnlContenedorTitulo
             // 
             this.pnlContenedorTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -188,15 +197,6 @@
             this.pnlContenedorTitulo.VerticalScrollbarBarColor = true;
             this.pnlContenedorTitulo.VerticalScrollbarHighlightOnWheel = false;
             this.pnlContenedorTitulo.VerticalScrollbarSize = 10;
-            // 
-            // userCInicio1
-            // 
-            this.userCInicio1.Detalle = null;
-            this.userCInicio1.Location = new System.Drawing.Point(72, 82);
-            this.userCInicio1.Name = "userCInicio1";
-            this.userCInicio1.Nombre = null;
-            this.userCInicio1.Size = new System.Drawing.Size(419, 152);
-            this.userCInicio1.TabIndex = 2;
             // 
             // frmCargaInicial
             // 

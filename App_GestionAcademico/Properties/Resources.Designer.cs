@@ -553,6 +553,16 @@ namespace App_AcademicManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Registro {
+            get {
+                object obj = ResourceManager.GetObject("Registro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap regPro {
             get {
                 object obj = ResourceManager.GetObject("regPro", resourceCulture);
@@ -686,6 +696,16 @@ namespace App_AcademicManagement.Properties {
         internal static System.Drawing.Bitmap salir2 {
             get {
                 object obj = ResourceManager.GetObject("salir2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sitio_web {
+            get {
+                object obj = ResourceManager.GetObject("sitio_web", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -10,7 +10,7 @@ namespace BL
 {
     public class blRole
     {
-        public List<aeRole> GetRow(int pIdUser, ref string pResult)
+        public List<aeRole> GetRows(int pIdUser, ref string pResult)
         {
             return daRole.GetData(pIdUser,ref pResult);
             //foreach (var item in oList)

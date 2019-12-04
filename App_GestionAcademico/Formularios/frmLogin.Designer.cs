@@ -134,6 +134,7 @@
             this.txtPasword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPasword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txtPasword.Enter += new System.EventHandler(this.txtPasword_Enter);
+            this.txtPasword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPasword_KeyDown);
             this.txtPasword.Leave += new System.EventHandler(this.txtPasword_Leave);
             // 
             // txtUser
@@ -169,6 +170,7 @@
             this.txtUser.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtUser.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
+            this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
             this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
             // 
             // picPass

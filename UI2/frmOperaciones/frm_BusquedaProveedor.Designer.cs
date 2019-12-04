@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_BusquedaProveedor));
             this.dtgclientes = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnseleccionarcliente = new System.Windows.Forms.Button();
             this.btnbuscarcliente = new System.Windows.Forms.Button();
             this.txttelefono = new System.Windows.Forms.TextBox();
@@ -37,10 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btncancelar = new System.Windows.Forms.Button();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgclientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +55,7 @@
             this.Nombre,
             this.Direccion,
             this.Telefono});
-            this.dtgclientes.Location = new System.Drawing.Point(23, 81);
+            this.dtgclientes.Location = new System.Drawing.Point(33, 240);
             this.dtgclientes.MultiSelect = false;
             this.dtgclientes.Name = "dtgclientes";
             this.dtgclientes.ReadOnly = true;
@@ -63,12 +63,44 @@
             this.dtgclientes.Size = new System.Drawing.Size(805, 218);
             this.dtgclientes.TabIndex = 46;
             // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "IdCliente";
+            this.Codigo.HeaderText = "Id";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 80;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "RazonSocial";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 250;
+            // 
+            // Direccion
+            // 
+            this.Direccion.DataPropertyName = "Direccion";
+            this.Direccion.HeaderText = "Apellidos";
+            this.Direccion.Name = "Direccion";
+            this.Direccion.ReadOnly = true;
+            this.Direccion.Width = 250;
+            // 
+            // Telefono
+            // 
+            this.Telefono.DataPropertyName = "Telefonos";
+            this.Telefono.HeaderText = "Nro Documento";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            this.Telefono.Width = 150;
+            // 
             // btnseleccionarcliente
             // 
             this.btnseleccionarcliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnseleccionarcliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnseleccionarcliente.Image = ((System.Drawing.Image)(resources.GetObject("btnseleccionarcliente.Image")));
-            this.btnseleccionarcliente.Location = new System.Drawing.Point(302, 305);
+            this.btnseleccionarcliente.Location = new System.Drawing.Point(312, 464);
             this.btnseleccionarcliente.Name = "btnseleccionarcliente";
             this.btnseleccionarcliente.Size = new System.Drawing.Size(77, 39);
             this.btnseleccionarcliente.TabIndex = 45;
@@ -124,50 +156,18 @@
             this.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btncancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncancelar.Image = ((System.Drawing.Image)(resources.GetObject("btncancelar.Image")));
-            this.btncancelar.Location = new System.Drawing.Point(467, 305);
+            this.btncancelar.Location = new System.Drawing.Point(477, 464);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(78, 39);
             this.btncancelar.TabIndex = 47;
             this.btncancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btncancelar.UseVisualStyleBackColor = true;
             // 
-            // Codigo
-            // 
-            this.Codigo.DataPropertyName = "IdCliente";
-            this.Codigo.HeaderText = "Id";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 80;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "RazonSocial";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 250;
-            // 
-            // Direccion
-            // 
-            this.Direccion.DataPropertyName = "Direccion";
-            this.Direccion.HeaderText = "Apellidos";
-            this.Direccion.Name = "Direccion";
-            this.Direccion.ReadOnly = true;
-            this.Direccion.Width = 250;
-            // 
-            // Telefono
-            // 
-            this.Telefono.DataPropertyName = "Telefonos";
-            this.Telefono.HeaderText = "Nro Documento";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            this.Telefono.Width = 150;
-            // 
             // frm_BusquedaProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(855, 369);
+            this.ClientSize = new System.Drawing.Size(960, 494);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.dtgclientes);
             this.Controls.Add(this.btnseleccionarcliente);
