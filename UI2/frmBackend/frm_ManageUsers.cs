@@ -11,16 +11,11 @@ using System.Windows.Forms;
 
 namespace UI2
 {
-    public partial class frm_bacRolAgr : MetroForm
+    public partial class frm_ManageUsers : MetroForm
     {
-        public frm_bacRolAgr()
+        public frm_ManageUsers()
         {
             InitializeComponent();
-        }
-
-        private void btnUsuarios_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

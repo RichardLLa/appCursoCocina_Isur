@@ -34,3 +34,4 @@ E:\Cursos\Escritorio\App_AcademicManagement\UI2\bin\Debug\DA.dll
 E:\Cursos\Escritorio\App_AcademicManagement\UI2\bin\Debug\AE.pdb
 E:\Cursos\Escritorio\App_AcademicManagement\UI2\bin\Debug\BL.pdb
 E:\Cursos\Escritorio\App_AcademicManagement\UI2\bin\Debug\DA.pdb
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.frm_bacRolAdm.resources

@@ -160,6 +160,24 @@
     <Compile Include="frmRegistros\frm_regRecAgr.Designer.cs">
       <DependentUpon>frm_regRecAgr.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBackend\frm_ManageUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackend\frm_ManageUsers.Designer.cs">
+      <DependentUpon>frm_ManageUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBackend\frm_ManageMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackend\frm_ManageMenu.Designer.cs">
+      <DependentUpon>frm_ManageMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBackend\frm_ManageRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackend\frm_ManageRole.Designer.cs">
+      <DependentUpon>frm_ManageRole.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -168,6 +186,30 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmBackend\frm_bacMenAdm.resx">
+      <DependentUpon>frm_bacMenAdm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBackend\frm_bacRolAdm.resx">
+      <DependentUpon>frm_bacRolAdm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBackend\frm_bacRolAgr.resx">
+      <DependentUpon>frm_bacRolAgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBackend\frm_bacUsuAdm.resx">
+      <DependentUpon>frm_bacUsuAdm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBackend\frm_bacUsuAgr.resx">
+      <DependentUpon>frm_bacUsuAgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBackend\frm_ManageMenu.resx">
+      <DependentUpon>frm_ManageMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBackend\frm_ManageRole.resx">
+      <DependentUpon>frm_ManageRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBackend\frm_ManageUsers.resx">
+      <DependentUpon>frm_ManageUsers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmOperaciones\frm_BusquedaProveedor.resx">
       <DependentUpon>frm_BusquedaProveedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +252,11 @@
   <ItemGroup>
     <Content Include="img\fru.png" />
     <Content Include="img\fru2.png" />
+    <None Include="Resources\config2.png" />
+    <None Include="Resources\config.png" />
+    <None Include="Resources\Atras.png" />
+    <None Include="Resources\back2.png" />
+    <None Include="Resources\back.png" />
     <None Include="Resources\Registro.png" />
     <None Include="Resources\sal2.png" />
     <None Include="Resources\sal.png" />
