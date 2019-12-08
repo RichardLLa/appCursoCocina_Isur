@@ -1,2 +1,2 @@
-# appCursoCocina_Isur
-este es mi prpyecto del curso de Aplicacione de ecritorio
+# app Curso Cocina Isur
+este es mi proyecto del curso de Aplicaciones de ecritorio.
