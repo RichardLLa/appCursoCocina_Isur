@@ -184,6 +184,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Util\ManagerUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmBackend\frm_bacMenAdm.resx">
@@ -252,6 +253,7 @@
   <ItemGroup>
     <Content Include="img\fru.png" />
     <Content Include="img\fru2.png" />
+    <None Include="Resources\carpetas.png" />
     <None Include="Resources\config2.png" />
     <None Include="Resources\config.png" />
     <None Include="Resources\Atras.png" />

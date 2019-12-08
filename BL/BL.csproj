@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="blCategory.cs" />
     <Compile Include="blDetailOperation.cs" />
+    <Compile Include="Operaciones\blSupplier.cs" />
+    <Compile Include="Seguridad\blPermission.cs" />
     <Compile Include="blProduct.cs" />
     <Compile Include="Seguridad\blRole.cs" />
     <Compile Include="Seguridad\blPerson.cs" />
@@ -50,6 +52,7 @@
     <Compile Include="control de errores\blControlError.cs" />
     <Compile Include="Seguridad\blUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\blDateTimeServer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AE\AE.csproj">

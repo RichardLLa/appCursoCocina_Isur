@@ -15,10 +15,11 @@ namespace AE
         public int IdPerson { get; set; }
         public string FirtsName { get; set; }
         public string LastName { get; set; }
-        public string Telefono { get; set; }
-        public string Documento { get; set; }
+        public string Telephone { get; set; }
+        public int TypeDocument { get; set; }
         public string NroDocument { get; set; }
-        public string Correo { get; set; }
+        public string Mail { get; set; }
+
         // public aeUser User { get; set; }
         // public aePerson(aeUser pUser)
         // {

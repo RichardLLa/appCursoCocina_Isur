@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="daDetailOperation.cs" />
+    <Compile Include="daSupplier.cs" />
+    <Compile Include="Seguridad\daPermission.cs" />
     <Compile Include="daProduct.cs" />
     <Compile Include="Control de errores\daControlError.cs" />
     <Compile Include="daCategory.cs" />
@@ -53,6 +56,7 @@
     <Compile Include="Seguridad\daSesion.cs" />
     <Compile Include="Seguridad\daUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="util\daDateTimeServer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AE\AE.csproj">

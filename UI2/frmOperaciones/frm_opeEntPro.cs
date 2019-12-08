@@ -12,11 +12,13 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using MetroFramework.Controls;
 using System.IO;
+using UI2.frmOperaciones;
 
 namespace UI2
 {
     public partial class frm_opeEntPro : MetroForm
     {
+
         private blProduct oBL;
         static string _error = null;
         public frm_opeEntPro()
@@ -34,10 +36,6 @@ namespace UI2
         double Cantidad = 0;
         #endregion
         #region Metodos
-        private void AlterarProducto()
-        {
-            productSelected.UnitPrice = Convert.ToInt32(txtPrecio.Text);
-        }
 
         #endregion
         #region Eventos
@@ -81,35 +79,46 @@ namespace UI2
             }
 
         }
+        public bool IsDeleted = false;
+        private int idContador = 1;
         private void btnAgregarEliminar_Click(object sender, EventArgs e)
         {
+            btnAgregarEliminar.Focus();
             if (isValidate())
             {
-                AlterarProducto();
-                aeDeatailOperation oRow = new aeDeatailOperation(productSelected.Name, productSelected.IdProduct,
-                    Cantidad, productSelected.UnitPrice);
-                detalles.Add(oRow);
-                dtgDetailsOperation.Rows.Add("", productSelected.Name, productSelected.IdProduct, Cantidad, 
-                    productSelected.UnitPrice,txtTotal.Text);
-                dtgDetailsOperation.Refresh();
+                if (IsDeleted)
+                {
+                    if (dtgDetailsOperation.Rows.Count < 1) return;
+                    dtgDetailsOperation.Rows.RemoveAt(dtgDetailsOperation.CurrentRow.Index);
+                    dtgDetailsOperation.Refresh();
+                }
+                else
+                {
+                    productSelected.UnitPrice = Convert.ToDouble(txtPrecio.Text);
+                    Cantidad = Convert.ToDouble(txtCantidad.Text);
+                    dtgDetailsOperation.Rows.Add(idContador, productSelected.Name, 
+                         productSelected.UnitPrice, Cantidad,txtTotal.Text, productSelected.IdProduct);
+                    dtgDetailsOperation.Refresh();
+                    idContador++;
+                }
                 SumarTotal();
             }
         }
-
         private void SumarTotal()
         {
-            double suma = 0;
-            foreach (var item in detalles)
+            double sumatotal = 0;
+            foreach (DataGridViewRow item in dtgDetailsOperation.Rows)
             {
-                suma = item.UnitPrice * item.Quantity;
+                sumatotal += Convert.ToDouble(item.Cells[4].Value);
             }
+            txtSumatotal.Text = sumatotal.ToString();
         }
-
         private bool isValidate()
         {
             if (lblDescripcion.Text == string.Empty) return false;
-            if (txtPrecio.Text == string.Empty) return false;
-            if (txtCantidad.Text == string.Empty) return false;
+            if (txtPrecio.Text == string.Empty ) return false;
+            if (txtCantidad.Text == string.Empty  ) return false;
+            if (Convert.ToDouble(txtCantidad.Text) == 0) return false;
             return true;
         }
 
@@ -176,6 +185,7 @@ namespace UI2
         #region Button dinamicos
         #region Variables
         private Button btnClick = null;
+
 
         #endregion
         #region Metodos
@@ -288,8 +298,12 @@ namespace UI2
                 lblStock.Text = "Stock: " + productSelected.Stock;
                 lblDescripcion.Text = productSelected.Name;
                 txtPrecio.Text = productSelected.UnitPrice.ToString();
-                txtCantidad.Text = "1";
+                txtCantidad.Text = Cantidad.ToString();
                 txtTotal.Text = productSelected.UnitPrice.ToString();
+                IsDeleted = false;
+                btnAgregarEliminar.Text = "Agregar";
+                txtCantidad.Focus();
+                txtCantidad.SelectAll();
             }
         }
 
@@ -304,6 +318,35 @@ namespace UI2
 
         }
 
-        
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtgDetailsOperation_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IsDeleted = true;
+            btnAgregarEliminar.Text = "Eliminar";
+        }
+
+        private void dtgDetailsOperation_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IsDeleted = true;
+            btnAgregarEliminar.Text = "Eliminar";
+        }
+
+        private void txtCantidad_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnAgregarEliminar_Click(null, null);
+            }
+        }
+
+        private void btnbuscarcliente_Click(object sender, EventArgs e)
+        {
+            frm_BusquedaProveedor provedor = new frm_BusquedaProveedor();
+            
+        }
     }
 }

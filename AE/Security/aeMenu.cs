@@ -16,6 +16,10 @@ namespace AE
         public bool Estate { get; set; }
         public string RowVersion { get; set; }
         public int Level { get; set; }
-        
+        public string UserInsert { get; set; }
+        public string UserUpdate { get; set; }
+        public DateTime DateInsert { get; set; }
+        public DateTime? DateUpdate { get; set; }
+
     }
 }

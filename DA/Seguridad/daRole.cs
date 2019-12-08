@@ -11,7 +11,7 @@ namespace DA
 {
     public class daRole
     {
-        public static List<aeRole> GetData(int pIdUser,ref string pResult)
+        public static List<aeRole> GetDataByUser(int pIdUser,ref string pResult)
         {
             SqlConnection oCnnData = daConnection.Connect();
             try
@@ -48,6 +48,36 @@ namespace DA
             oCnnData.Close();
             return null;
         }
-
+        public static List<aeRole> GetDataByIdMenu(int pIdMenu, ref string pResult)
+        {
+            SqlConnection oCnnData = daConnection.Connect();
+            try
+            {
+                List<aeRole> oLista = new List<aeRole>();
+                SqlCommand oCmd = new SqlCommand("uspRoleSelectIdMenu", oCnnData);
+                oCmd.CommandType = CommandType.StoredProcedure;
+                oCmd.Parameters.Clear();
+                oCmd.Parameters.AddWithValue("@pIdMenu", pIdMenu);
+                //oCmd.Parameters.Add("@pResult", SqlDbType.NVarChar, 250).Direction = ParameterDirection.Output;
+                SqlDataReader oRdr;
+                oRdr = oCmd.ExecuteReader();
+                while (oRdr.Read())
+                {
+                    aeRole oRow = new aeRole();
+                    oRow.IdRole = Convert.ToInt16(oRdr["IdRole"].ToString());
+                    oRow.Name = (oRdr["Name"] == DBNull.Value) ? "" : oRdr["Name"].ToString();
+                    oRow.Estate = (oRdr["Estate"] == DBNull.Value) ? false : Convert.ToBoolean(oRdr["Estate"]);
+                    oLista.Add(oRow);
+                }
+                oCnnData.Close();
+                return oLista;
+            }
+            catch (Exception ex)
+            {
+                pResult = ex.Message;
+            }
+            oCnnData.Close();
+            return null;
+        }
     }
 }

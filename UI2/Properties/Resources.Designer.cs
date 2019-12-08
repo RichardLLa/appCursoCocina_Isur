@@ -153,6 +153,16 @@ namespace UI2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carpetas {
+            get {
+                object obj = ResourceManager.GetObject("carpetas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cer {
             get {
                 object obj = ResourceManager.GetObject("cer", resourceCulture);

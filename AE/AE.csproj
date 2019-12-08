@@ -50,6 +50,7 @@
     <Compile Include="aeCategory.cs" />
     <Compile Include="aeDeatailOperation.cs" />
     <Compile Include="aeProduct.cs" />
+    <Compile Include="aeSupplier.cs" />
     <Compile Include="Security\aeControlError.cs" />
     <Compile Include="Security\aeMenu.cs" />
     <Compile Include="Security\aePerson.cs" />

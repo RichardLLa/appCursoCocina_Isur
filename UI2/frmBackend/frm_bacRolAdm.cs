@@ -38,12 +38,10 @@ namespace UI2
 
         private void btnMenus_Click(object sender, EventArgs e)
         {
-            lblTituloPermisos.Text = "Menus";
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            lblTituloPermisos.Text = "Personas";
         }
     }
 }

@@ -28,10 +28,10 @@ namespace DA
                 oRow.IdPerson = Convert.ToInt16(oRdr["IdPersona"].ToString());
                 oRow.FirtsName = (oRdr["Nombre"] == DBNull.Value) ? null : oRdr["Nombre"].ToString();
                 oRow.LastName = (oRdr["Apellidos"] == DBNull.Value) ? null : oRdr["Apellidos"].ToString();
-                oRow.Telefono = (oRdr["Telefono"] == DBNull.Value) ? null : oRdr["Telefono"].ToString();
-                oRow.Documento = (oRdr["Documento"] == DBNull.Value) ? null : oRdr["Documento"].ToString();
+                oRow.Telephone = (oRdr["Telefono"] == DBNull.Value) ? null : oRdr["Telefono"].ToString();
+                oRow.NroDocument = (oRdr["Documento"] == DBNull.Value) ? null : oRdr["Documento"].ToString();
                 oRow.NroDocument = (oRdr["NroDocumento"] == DBNull.Value) ? null: oRdr["NroDocumento"].ToString();
-                oRow.Correo = (oRdr["Correo"] == DBNull.Value) ?null : oRdr["Correo"].ToString();
+                oRow.Mail = (oRdr["Correo"] == DBNull.Value) ?null : oRdr["Correo"].ToString();
             }
             oCnnData.Close();
             return oRow;

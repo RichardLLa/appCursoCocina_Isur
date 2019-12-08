@@ -36,5 +36,9 @@ namespace BL
             oRow.ListRoles = rol.GetRows(oRow.IdUser, ref pResult);
             return oRow;
         }
+        public List<aeUser> GetRowByIdMenu(int pIdMenu, ref string pResult)
+        {
+            return daUser.GetDataByIdMenu(pIdMenu, ref pResult);
+        }
     }
 }

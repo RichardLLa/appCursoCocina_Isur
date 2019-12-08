@@ -130,5 +130,38 @@ namespace DA
             return null;
         }
 
+        public static List<aeUser> GetDataByIdMenu(int pIdMenu, ref string pResult)
+        {
+            SqlConnection oCnnData = daConnection.Connect();
+            try
+            {
+                List<aeUser> oLista = new List<aeUser>();
+                SqlCommand oCmd = new SqlCommand("uspUserSelectByIdMenu", oCnnData);
+                oCmd.CommandType = CommandType.StoredProcedure;
+                oCmd.Parameters.Clear();
+                oCmd.Parameters.AddWithValue("@pIdMenu", pIdMenu);
+                SqlDataReader oRdr;
+                oRdr = oCmd.ExecuteReader();
+                while (oRdr.Read())
+                {
+                    aeUser oRow = new aeUser();
+                    oRow.IdUser = Convert.ToInt16(oRdr["IdUser"]);
+                    oRow.Alias = (oRdr["Alias"] == DBNull.Value) ? null : oRdr["Alias"].ToString();
+                    oRow.Password = (oRdr["Password"] == DBNull.Value) ? null : oRdr["Password"].ToString();
+                    oRow.Estate = (oRdr["Estate"] == DBNull.Value) ? false : Convert.ToInt16(oRdr["Estate"]) == 1 ? true : false;
+                    oRow.RowVersion = (oRdr["RowVersion"] == DBNull.Value) ? null : oRdr["RowVersion"].ToString();
+                    oLista.Add(oRow);
+                }
+                oCnnData.Close();
+                return oLista;
+            }
+            catch (Exception ex)
+            {
+                pResult = ex.Message;
+            }
+            oCnnData.Close();
+            return null;
+        }
+
     }
 }

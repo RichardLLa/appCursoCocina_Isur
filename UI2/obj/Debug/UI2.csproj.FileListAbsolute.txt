@@ -35,3 +35,10 @@ E:\Cursos\Escritorio\App_AcademicManagement\UI2\bin\Debug\AE.pdb
 E:\Cursos\Escritorio\App_AcademicManagement\UI2\bin\Debug\BL.pdb
 E:\Cursos\Escritorio\App_AcademicManagement\UI2\bin\Debug\DA.pdb
 E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.frm_bacRolAdm.resources
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.frm_bacMenAdm.resources
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.frm_bacRolAgr.resources
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.frm_bacUsuAdm.resources
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.frm_bacUsuAgr.resources
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.frm_ManageMenu.resources
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.frm_ManageRole.resources
+E:\Cursos\Escritorio\App_AcademicManagement\UI2\obj\Debug\UI2.frm_ManageUsers.resources

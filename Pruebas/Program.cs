@@ -16,7 +16,9 @@ namespace Pruebas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UI2.frm_bacRolAdm());
+            var v = new UI2.frm_opeEntPro();
+            //v.Dock = DockStyle.Fill;
+            Application.Run( v);
         }
     }
 }
